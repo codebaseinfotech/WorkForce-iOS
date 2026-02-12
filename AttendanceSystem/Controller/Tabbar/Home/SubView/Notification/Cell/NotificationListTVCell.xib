@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="NotificationListTVCell" customModule="AttendanceSystem" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBy-Af-dbg">
+                        <rect key="frame" x="20" y="8" width="280" height="88"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_notification" translatesAutoresizingMaskIntoConstraints="NO" id="oFD-gc-OI1">
+                                <rect key="frame" x="16" y="12" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="cqY-yA-Pdp"/>
+                                    <constraint firstAttribute="height" constant="64" id="zc2-KD-1Wk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="New Task Assigned to You!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gk3-tH-Xwc">
+                                <rect key="frame" x="92" y="18" width="34.333333333333343" height="16.666666666666671"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMr-Os-b7a">
+                                <rect key="frame" x="234.66666666666663" y="18.666666666666668" width="29.333333333333371" height="15.333333333333332"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have new task for this sprint from Alicia, you can check your task “Create Onboarding Screen” by tap here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVD-aI-pmm">
+                                <rect key="frame" x="92" y="42.666666666666664" width="172" height="28.333333333333336"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                <color key="textColor" name="gray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oFD-gc-OI1" firstAttribute="centerY" secondItem="CBy-Af-dbg" secondAttribute="centerY" id="0hU-1u-55U"/>
+                            <constraint firstItem="eVD-aI-pmm" firstAttribute="top" secondItem="gk3-tH-Xwc" secondAttribute="bottom" constant="8" id="4Bg-zw-zq6"/>
+                            <constraint firstItem="eVD-aI-pmm" firstAttribute="leading" secondItem="oFD-gc-OI1" secondAttribute="trailing" constant="12" id="Cle-7A-mNT"/>
+                            <constraint firstItem="gk3-tH-Xwc" firstAttribute="top" secondItem="oFD-gc-OI1" secondAttribute="top" constant="6" id="EcB-4F-4Vj"/>
+                            <constraint firstItem="oFD-gc-OI1" firstAttribute="leading" secondItem="CBy-Af-dbg" secondAttribute="leading" constant="16" id="Fb0-Lu-eWi"/>
+                            <constraint firstAttribute="trailing" secondItem="eVD-aI-pmm" secondAttribute="trailing" constant="16" id="Fh5-Fr-xs4"/>
+                            <constraint firstItem="CMr-Os-b7a" firstAttribute="centerY" secondItem="gk3-tH-Xwc" secondAttribute="centerY" id="UUF-cg-ngW"/>
+                            <constraint firstAttribute="trailing" secondItem="CMr-Os-b7a" secondAttribute="trailing" constant="16" id="jgT-vE-iN0"/>
+                            <constraint firstItem="CMr-Os-b7a" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gk3-tH-Xwc" secondAttribute="trailing" constant="5" id="o2p-6Z-lTv"/>
+                            <constraint firstItem="gk3-tH-Xwc" firstAttribute="leading" secondItem="oFD-gc-OI1" secondAttribute="trailing" constant="12" id="zuT-sj-tL3"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="CBy-Af-dbg" secondAttribute="bottom" constant="8" id="0Ka-9T-2z2"/>
+                    <constraint firstItem="CBy-Af-dbg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Mdm-jQ-miE"/>
+                    <constraint firstAttribute="trailing" secondItem="CBy-Af-dbg" secondAttribute="trailing" constant="20" id="SgY-y6-sM6"/>
+                    <constraint firstItem="CBy-Af-dbg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="jQA-RK-UJq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="lblNotiDis" destination="eVD-aI-pmm" id="BZH-ls-aFz"/>
+                <outlet property="lblNotiTime" destination="CMr-Os-b7a" id="mUS-Wj-ZcK"/>
+                <outlet property="lblNotiTitle" destination="gk3-tH-Xwc" id="Iep-Ms-EXr"/>
+            </connections>
+            <point key="canvasLocation" x="140" y="120"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="img_notification" width="64" height="64"/>
+        <namedColor name="gray">
+            <color red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

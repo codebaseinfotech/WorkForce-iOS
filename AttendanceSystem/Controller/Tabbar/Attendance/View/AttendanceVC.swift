@@ -9,6 +9,15 @@ import UIKit
 
 class AttendanceVC: UIViewController {
 
+    @IBOutlet weak var tblViewAttendanceList: UITableView! {
+        didSet {
+            tblViewAttendanceList.register(UINib(nibName: "AttendanceListTVCell", bundle: nil), forCellReuseIdentifier: "AttendanceListTVCell")
+            tblViewAttendanceList.dataSource = self
+            tblViewAttendanceList.delegate = self
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,4 +46,20 @@ class AttendanceVC: UIViewController {
     }
     
 
+}
+
+extension AttendanceVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tblViewAttendanceList.dequeueReusableCell(withIdentifier: "AttendanceListTVCell", for: indexPath) as! AttendanceListTVCell
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 }

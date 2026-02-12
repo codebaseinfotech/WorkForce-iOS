@@ -68,11 +68,12 @@ class HomeVC: UIViewController {
     // MARK: - Actions
     
     @IBAction func tappedChat(_ sender: Any) {
-        let vc = ApplyLeaveVC()
-        navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     @IBAction func tappedNotification(_ sender: Any) {
+        let vc = NotificationVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func tappedBreakIn(_ sender: Any) {

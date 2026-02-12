@@ -9,6 +9,18 @@ import UIKit
 
 class ProfileVC: UIViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView! {
+        didSet {
+            scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 70, right: 0)
+        }
+    }
+    
+    @IBOutlet weak var imgProfile: UIImageView!
+    @IBOutlet weak var lblUserName: UILabel!
+    @IBOutlet weak var lblUserProfession: UILabel!
+    @IBOutlet weak var lblEmail: UILabel!
+    @IBOutlet weak var lblPhoneNum: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,6 +46,36 @@ class ProfileVC: UIViewController {
     @IBAction func tappedTAttendance(_ sender: Any) {
         let vc = AttendanceVC()
         navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    // MARK: - Actions
+    @IBAction func tappedPersonalDate(_ sender: Any) {
+    }
+    
+    @IBAction func tappedLocation(_ sender: Any) {
+    }
+    
+    @IBAction func tappedLeaveReq(_ sender: Any) {
+        let vc = ApplyLeaveVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func tappedPayroll(_ sender: Any) {
+    }
+    
+    @IBAction func tappedChangePass(_ sender: Any) {
+    }
+    
+    @IBAction func tappedVersioning(_ sender: Any) {
+    }
+    
+    @IBAction func tappedFaqs(_ sender: Any) {
+    }
+    
+    @IBAction func tappedLogout(_ sender: Any) {
+    }
+    
+    @IBAction func tappedDeleteAccount(_ sender: Any) {
     }
     
     
