@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Satoshi-Bold.otf">
+            <string>Satoshi-Bold</string>
+        </array>
+        <array key="Satoshi-Medium.otf">
+            <string>Satoshi-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UploadSignatureVC" customModule="AttendanceSystem" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewSignature" destination="CUk-3E-BP3" id="VgM-9j-UQs"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aoR-ue-RcG">
+                    <rect key="frame" x="20" y="279.66666666666669" width="353" height="293.00000000000006"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VuX-Hh-vj0">
+                            <rect key="frame" x="20" y="20" width="313" height="25"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digital signature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFu-He-Qtk" customClass="AppLabel" customModule="Toretto_Recovery_UAE" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="278" height="25"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0UI-N1-bnZ">
+                                    <rect key="frame" x="278" y="0.0" width="35" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="35" id="Hhg-KV-gBM"/>
+                                        <constraint firstAttribute="height" constant="25" id="a2M-Bg-Q5H"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="ic_close"/>
+                                    <connections>
+                                        <action selector="tappedClose:" destination="-1" eventType="touchUpInside" id="8Km-nx-jRZ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GYk-cK-1HP">
+                            <rect key="frame" x="20" y="57" width="313" height="160"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Pfb-gn-NpB">
+                                    <rect key="frame" x="20" y="121" width="273" height="25"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_signature_line" translatesAutoresizingMaskIntoConstraints="NO" id="QK6-kR-rZz">
+                                            <rect key="frame" x="0.0" y="0.0" width="273" height="1"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="BDe-yn-ziL"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please do your digital signature here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkZ-zx-kiY" customClass="AppLabel" customModule="Toretto_Recovery_UAE" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="11" width="273" height="14"/>
+                                            <fontDescription key="fontDescription" name="Satoshi-Medium" family="Satoshi" pointSize="12"/>
+                                            <color key="textColor" name="gray"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUk-3E-BP3" customClass="SignatureView" customModule="Toretto_Recovery_UAE" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="313" height="121"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" name="gray_base"/>
+                            <constraints>
+                                <constraint firstItem="Pfb-gn-NpB" firstAttribute="top" secondItem="CUk-3E-BP3" secondAttribute="bottom" id="E7k-1w-lmY"/>
+                                <constraint firstItem="CUk-3E-BP3" firstAttribute="top" secondItem="GYk-cK-1HP" secondAttribute="top" id="MUY-J8-d0E"/>
+                                <constraint firstItem="CUk-3E-BP3" firstAttribute="leading" secondItem="GYk-cK-1HP" secondAttribute="leading" id="MqA-aD-IG6"/>
+                                <constraint firstAttribute="bottom" secondItem="Pfb-gn-NpB" secondAttribute="bottom" constant="14" id="TJo-ef-vep"/>
+                                <constraint firstAttribute="trailing" secondItem="Pfb-gn-NpB" secondAttribute="trailing" constant="20" id="VYZ-8y-h9c"/>
+                                <constraint firstAttribute="trailing" secondItem="CUk-3E-BP3" secondAttribute="trailing" id="huc-un-hxc"/>
+                                <constraint firstItem="Pfb-gn-NpB" firstAttribute="leading" secondItem="GYk-cK-1HP" secondAttribute="leading" constant="20" id="wgX-RD-u4U"/>
+                                <constraint firstAttribute="height" constant="160" id="xRo-yz-jXA"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="Storke"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="e4E-O8-TC8">
+                            <rect key="frame" x="20" y="236.99999999999994" width="313" height="36"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvN-Bd-xai" customClass="AppButton" customModule="Toretto_Recovery_UAE" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="151.66666666666666" height="36"/>
+                                    <fontDescription key="fontDescription" name="Satoshi-Bold" family="Satoshi" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Cancel">
+                                        <color key="titleColor" name="primery"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="18"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" name="primery"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eqy-UU-Lun" customClass="AppButton" customModule="Toretto_Recovery_UAE" customModuleProvider="target">
+                                    <rect key="frame" x="161.66666666666663" y="0.0" width="151.33333333333337" height="36"/>
+                                    <color key="backgroundColor" name="primery"/>
+                                    <fontDescription key="fontDescription" name="Satoshi-Bold" family="Satoshi" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Submit">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="18"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tappedSubmit:" destination="-1" eventType="touchUpInside" id="d0O-yA-Yuy"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="TX4-Ql-eDj"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="e4E-O8-TC8" secondAttribute="trailing" constant="20" id="KCY-ac-IRY"/>
+                        <constraint firstAttribute="trailing" secondItem="GYk-cK-1HP" secondAttribute="trailing" constant="20" id="KGF-3l-7S8"/>
+                        <constraint firstAttribute="trailing" secondItem="VuX-Hh-vj0" secondAttribute="trailing" constant="20" id="Ns4-sd-lHD"/>
+                        <constraint firstItem="GYk-cK-1HP" firstAttribute="leading" secondItem="aoR-ue-RcG" secondAttribute="leading" constant="20" id="RWh-zn-2ml"/>
+                        <constraint firstItem="e4E-O8-TC8" firstAttribute="top" secondItem="GYk-cK-1HP" secondAttribute="bottom" constant="20" id="Tfq-QM-pGh"/>
+                        <constraint firstItem="e4E-O8-TC8" firstAttribute="leading" secondItem="aoR-ue-RcG" secondAttribute="leading" constant="20" id="YDV-P3-yIg"/>
+                        <constraint firstItem="VuX-Hh-vj0" firstAttribute="leading" secondItem="aoR-ue-RcG" secondAttribute="leading" constant="20" id="dLd-zp-2ZB"/>
+                        <constraint firstAttribute="bottom" secondItem="e4E-O8-TC8" secondAttribute="bottom" constant="20" id="j3G-9U-hhT"/>
+                        <constraint firstItem="VuX-Hh-vj0" firstAttribute="top" secondItem="aoR-ue-RcG" secondAttribute="top" constant="20" id="pKr-MI-3Y8"/>
+                        <constraint firstItem="GYk-cK-1HP" firstAttribute="top" secondItem="VuX-Hh-vj0" secondAttribute="bottom" constant="12" id="z6D-eo-b5C"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="aoR-ue-RcG" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="csN-4u-07a"/>
+                <constraint firstItem="aoR-ue-RcG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="pAK-78-g0M"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aoR-ue-RcG" secondAttribute="trailing" constant="20" id="sRW-Ag-kma"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="120"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_close" width="22" height="22"/>
+        <image name="ic_signature_line" width="255" height="1"/>
+        <namedColor name="Storke">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gray">
+            <color red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gray_base">
+            <color red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primery">
+            <color red="0.67450980392156867" green="0.41568627450980394" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
