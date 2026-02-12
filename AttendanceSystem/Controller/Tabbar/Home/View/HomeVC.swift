@@ -68,7 +68,8 @@ class HomeVC: UIViewController {
     // MARK: - Actions
     
     @IBAction func tappedChat(_ sender: Any) {
-        
+        let vc = ChatVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func tappedNotification(_ sender: Any) {

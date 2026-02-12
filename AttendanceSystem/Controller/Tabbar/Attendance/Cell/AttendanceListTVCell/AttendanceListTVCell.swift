@@ -9,6 +9,15 @@ import UIKit
 
 class AttendanceListTVCell: UITableViewCell {
     
+    @IBOutlet weak var lblToday: UILabel!
+    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var viewStatus: UIView!
+    @IBOutlet weak var lblStatus: UILabel!
+    @IBOutlet weak var lblTime: UILabel!
+    @IBOutlet weak var lblPlace: UILabel!
+    @IBOutlet weak var lblCheckInTime: UILabel!
+    @IBOutlet weak var lblCheckOutTime: UILabel!
+    @IBOutlet weak var btnView: UIButton!
     
 
     override func awakeFromNib() {

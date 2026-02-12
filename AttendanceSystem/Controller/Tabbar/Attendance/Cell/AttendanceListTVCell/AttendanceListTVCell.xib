@@ -47,8 +47,8 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECY-1c-guK">
                                                         <rect key="frame" x="0.0" y="0.0" width="224" height="22"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pds-Bm-tts">
-                                                                <rect key="frame" x="0.0" y="1.6666666666666714" width="39" height="19"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01 Jan 2026" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pds-Bm-tts">
+                                                                <rect key="frame" x="0.0" y="1.6666666666666714" width="88.333333333333329" height="19"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -63,7 +63,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="backgroundColor" red="0.41960784313725491" green="0.8666666666666667" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="cgO-zD-ajO" firstAttribute="centerY" secondItem="517-KV-7hZ" secondAttribute="centerY" id="bbp-2Y-QIr"/>
                                                                     <constraint firstItem="cgO-zD-ajO" firstAttribute="leading" secondItem="517-KV-7hZ" secondAttribute="leading" constant="8" id="l0t-Sq-yOM"/>
@@ -113,10 +113,10 @@
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HxP-Ir-cUN">
                                                         <rect key="frame" x="0.0" y="159" width="224" height="19"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_dash_line" translatesAutoresizingMaskIntoConstraints="NO" id="KjT-nf-Kib">
-                                                                <rect key="frame" x="0.0" y="9" width="224" height="1"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_dash_line" translatesAutoresizingMaskIntoConstraints="NO" id="KjT-nf-Kib">
+                                                                <rect key="frame" x="0.0" y="8.6666666666666572" width="224" height="1.6666666666666661"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="1" id="1yA-u7-hIb"/>
+                                                                    <constraint firstAttribute="height" constant="1.5" id="1yA-u7-hIb"/>
                                                                 </constraints>
                                                             </imageView>
                                                         </subviews>
@@ -196,6 +196,17 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="btnView" destination="cUl-Ar-sev" id="0cU-qU-wVi"/>
+                <outlet property="lblCheckInTime" destination="IhY-d9-hqA" id="x0S-6C-q7g"/>
+                <outlet property="lblCheckOutTime" destination="Fic-U2-RIx" id="h53-5l-BIw"/>
+                <outlet property="lblDate" destination="Pds-Bm-tts" id="Fef-uH-GRo"/>
+                <outlet property="lblPlace" destination="zrm-eu-Rdj" id="RsU-cd-fGl"/>
+                <outlet property="lblStatus" destination="cgO-zD-ajO" id="WXo-Ds-rJh"/>
+                <outlet property="lblTime" destination="Npf-dw-ppT" id="GeK-xg-tgj"/>
+                <outlet property="lblToday" destination="TAI-G6-5WJ" id="j10-jT-zgd"/>
+                <outlet property="viewStatus" destination="517-KV-7hZ" id="LUD-ST-XB1"/>
+            </connections>
             <point key="canvasLocation" x="140" y="120"/>
         </tableViewCell>
     </objects>
