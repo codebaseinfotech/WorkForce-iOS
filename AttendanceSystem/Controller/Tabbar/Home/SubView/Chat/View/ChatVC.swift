@@ -43,4 +43,9 @@ extension ChatVC: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = UserChatVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

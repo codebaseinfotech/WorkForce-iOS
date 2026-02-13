@@ -37,6 +37,8 @@ class HomeVC: UIViewController {
     @IBOutlet weak var imgImployee3: UIImageView!
     @IBOutlet weak var lblCurrentTaskDate: UILabel!
     @IBOutlet weak var lblCurrentTaskMessage: UILabel!
+    @IBOutlet weak var btnCheckIn: UIButton!
+    @IBOutlet weak var btnBreakOut: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,5 +88,9 @@ class HomeVC: UIViewController {
     @IBAction func tappedViewTask(_ sender: Any) {
     }
     
+    @IBAction func tappedCheckIn(_ sender: Any) {
+    }
     
+    @IBAction func tappedBreakOut(_ sender: Any) {
+    }
 }

@@ -69,6 +69,10 @@
 		0ADC9D2F2F39F5D300A9F0E0 /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ADC9D2E2F39F5D300A9F0E0 /* SignUpVC.xib */; };
 		0ADC9D302F39F5D300A9F0E0 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC9D2D2F39F5D300A9F0E0 /* SignUpVC.swift */; };
 		0ADC9D332F39F88500A9F0E0 /* SignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC9D312F39F88500A9F0E0 /* SignatureView.swift */; };
+		BC0CA8AC2F3EDCCC00EDAFB1 /* ReciverChatTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0CA8A62F3EDCCC00EDAFB1 /* ReciverChatTVCell.swift */; };
+		BC0CA8AD2F3EDCCC00EDAFB1 /* SenderChatTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0CA8A92F3EDCCC00EDAFB1 /* SenderChatTVCell.swift */; };
+		BC0CA8AE2F3EDCCC00EDAFB1 /* SenderChatTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0CA8AA2F3EDCCC00EDAFB1 /* SenderChatTVCell.xib */; };
+		BC0CA8AF2F3EDCCC00EDAFB1 /* ReciverChatTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0CA8A72F3EDCCC00EDAFB1 /* ReciverChatTVCell.xib */; };
 		BC21A0902F3B5B3600CD7571 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC21A08F2F3B5B3600CD7571 /* HomeVC.xib */; };
 		BC21A0912F3B5B3600CD7571 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21A08E2F3B5B3600CD7571 /* HomeVC.swift */; };
 		BC27924A2F3C97BC009A3E3A /* ApplyLeaveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2792482F3C97BC009A3E3A /* ApplyLeaveVC.swift */; };
@@ -168,6 +172,10 @@
 		0ADC9D2D2F39F5D300A9F0E0 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		0ADC9D2E2F39F5D300A9F0E0 /* SignUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
 		0ADC9D312F39F88500A9F0E0 /* SignatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureView.swift; sourceTree = "<group>"; };
+		BC0CA8A62F3EDCCC00EDAFB1 /* ReciverChatTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciverChatTVCell.swift; sourceTree = "<group>"; };
+		BC0CA8A72F3EDCCC00EDAFB1 /* ReciverChatTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReciverChatTVCell.xib; sourceTree = "<group>"; };
+		BC0CA8A92F3EDCCC00EDAFB1 /* SenderChatTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderChatTVCell.swift; sourceTree = "<group>"; };
+		BC0CA8AA2F3EDCCC00EDAFB1 /* SenderChatTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SenderChatTVCell.xib; sourceTree = "<group>"; };
 		BC21A08E2F3B5B3600CD7571 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		BC21A08F2F3B5B3600CD7571 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		BC2792482F3C97BC009A3E3A /* ApplyLeaveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyLeaveVC.swift; sourceTree = "<group>"; };
@@ -506,6 +514,24 @@
 			path = SignatureView;
 			sourceTree = "<group>";
 		};
+		BC0CA8A82F3EDCCC00EDAFB1 /* ReciverChatTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				BC0CA8A62F3EDCCC00EDAFB1 /* ReciverChatTVCell.swift */,
+				BC0CA8A72F3EDCCC00EDAFB1 /* ReciverChatTVCell.xib */,
+			);
+			path = ReciverChatTVCell;
+			sourceTree = "<group>";
+		};
+		BC0CA8AB2F3EDCCC00EDAFB1 /* SenderChatTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				BC0CA8A92F3EDCCC00EDAFB1 /* SenderChatTVCell.swift */,
+				BC0CA8AA2F3EDCCC00EDAFB1 /* SenderChatTVCell.xib */,
+			);
+			path = SenderChatTVCell;
+			sourceTree = "<group>";
+		};
 		BC21A08B2F3B5B0A00CD7571 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -582,6 +608,8 @@
 		BC30D9012F3E02DA0023EC5F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				BC0CA8A82F3EDCCC00EDAFB1 /* ReciverChatTVCell */,
+				BC0CA8AB2F3EDCCC00EDAFB1 /* SenderChatTVCell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -972,6 +1000,8 @@
 				BC564A692F3AFD7C0069C734 /* ForgotPasswordVC.xib in Resources */,
 				0ADC9D2F2F39F5D300A9F0E0 /* SignUpVC.xib in Resources */,
 				BC4B39C32F3B2A0100311438 /* NewPasswordVC.xib in Resources */,
+				BC0CA8AE2F3EDCCC00EDAFB1 /* SenderChatTVCell.xib in Resources */,
+				BC0CA8AF2F3EDCCC00EDAFB1 /* ReciverChatTVCell.xib in Resources */,
 				0AAE66172F39E99500CEF8C5 /* VerifyPhoneVC.xib in Resources */,
 				BCCFCBC82F3DB05100A2988B /* AttendanceListTVCell.xib in Resources */,
 				BCCFCBC02F3DA06600A2988B /* NotificationListTVCell.xib in Resources */,
@@ -1005,6 +1035,8 @@
 				BCCFCBC92F3DB05100A2988B /* AttendanceListTVCell.swift in Sources */,
 				0A735F2B2F39BD8C00B17AB4 /* APIClient.swift in Sources */,
 				0A735F2C2F39BD8C00B17AB4 /* UILabel+Extention.swift in Sources */,
+				BC0CA8AC2F3EDCCC00EDAFB1 /* ReciverChatTVCell.swift in Sources */,
+				BC0CA8AD2F3EDCCC00EDAFB1 /* SenderChatTVCell.swift in Sources */,
 				0A735FBF2F39CDF800B17AB4 /* OnboardVC.swift in Sources */,
 				BCCAB3D92F3DECBA00CC541E /* ChatVC.swift in Sources */,
 				0ADC9D332F39F88500A9F0E0 /* SignatureView.swift in Sources */,
