@@ -50,6 +50,8 @@ class ProfileVC: UIViewController {
     
     // MARK: - Actions
     @IBAction func tappedPersonalDate(_ sender: Any) {
+        let vc = PersonalDataVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func tappedLocation(_ sender: Any) {
@@ -61,6 +63,8 @@ class ProfileVC: UIViewController {
     }
     
     @IBAction func tappedPayroll(_ sender: Any) {
+        let vc = PayrollAndTaxVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func tappedChangePass(_ sender: Any) {

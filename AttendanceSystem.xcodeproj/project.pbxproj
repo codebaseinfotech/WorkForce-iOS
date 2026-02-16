@@ -83,6 +83,8 @@
 		BC27924B2F3C97BC009A3E3A /* ApplyLeaveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC2792492F3C97BC009A3E3A /* ApplyLeaveVC.xib */; };
 		BC30D9042F3E047A0023EC5F /* UserChatVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC30D9032F3E047A0023EC5F /* UserChatVC.xib */; };
 		BC30D9052F3E047A0023EC5F /* UserChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC30D9022F3E047A0023EC5F /* UserChatVC.swift */; };
+		BC31B4CA2F43478F0062BE4F /* SalaryCalculationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31B4C82F43478F0062BE4F /* SalaryCalculationVC.swift */; };
+		BC31B4CB2F43478F0062BE4F /* SalaryCalculationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC31B4C92F43478F0062BE4F /* SalaryCalculationVC.xib */; };
 		BC4B39BD2F3B11E300311438 /* VerifyForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B39BB2F3B11E300311438 /* VerifyForgotPasswordVC.swift */; };
 		BC4B39BE2F3B11E300311438 /* VerifyForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4B39BC2F3B11E300311438 /* VerifyForgotPasswordVC.xib */; };
 		BC4B39C32F3B2A0100311438 /* NewPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4B39C22F3B2A0100311438 /* NewPasswordVC.xib */; };
@@ -95,6 +97,10 @@
 		BC564A642F3AEEEF0069C734 /* EmailVerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC564A612F3AEEEF0069C734 /* EmailVerificationVC.swift */; };
 		BC564A692F3AFD7C0069C734 /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC564A682F3AFD7C0069C734 /* ForgotPasswordVC.xib */; };
 		BC564A6A2F3AFD7C0069C734 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC564A672F3AFD7C0069C734 /* ForgotPasswordVC.swift */; };
+		BC564F082F4325FA00D4DA1C /* PersonalDataVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC564F072F4325FA00D4DA1C /* PersonalDataVC.xib */; };
+		BC564F092F4325FA00D4DA1C /* PersonalDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC564F062F4325FA00D4DA1C /* PersonalDataVC.swift */; };
+		BC564F0E2F433AA600D4DA1C /* PayrollAndTaxVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC564F0D2F433AA600D4DA1C /* PayrollAndTaxVC.xib */; };
+		BC564F0F2F433AA600D4DA1C /* PayrollAndTaxVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC564F0C2F433AA600D4DA1C /* PayrollAndTaxVC.swift */; };
 		BC575D832F43199B00124CF5 /* LogoutPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC575D812F43199B00124CF5 /* LogoutPopUp.swift */; };
 		BC575D842F43199B00124CF5 /* LogoutPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC575D822F43199B00124CF5 /* LogoutPopUp.xib */; };
 		BC5D2D502F3C377200A81E90 /* CheckInAndOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5D2D4E2F3C377200A81E90 /* CheckInAndOutVC.swift */; };
@@ -192,6 +198,8 @@
 		BC2792492F3C97BC009A3E3A /* ApplyLeaveVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplyLeaveVC.xib; sourceTree = "<group>"; };
 		BC30D9022F3E047A0023EC5F /* UserChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChatVC.swift; sourceTree = "<group>"; };
 		BC30D9032F3E047A0023EC5F /* UserChatVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserChatVC.xib; sourceTree = "<group>"; };
+		BC31B4C82F43478F0062BE4F /* SalaryCalculationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryCalculationVC.swift; sourceTree = "<group>"; };
+		BC31B4C92F43478F0062BE4F /* SalaryCalculationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SalaryCalculationVC.xib; sourceTree = "<group>"; };
 		BC4B39BB2F3B11E300311438 /* VerifyForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyForgotPasswordVC.swift; sourceTree = "<group>"; };
 		BC4B39BC2F3B11E300311438 /* VerifyForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerifyForgotPasswordVC.xib; sourceTree = "<group>"; };
 		BC4B39C12F3B2A0100311438 /* NewPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordVC.swift; sourceTree = "<group>"; };
@@ -204,6 +212,10 @@
 		BC564A622F3AEEEF0069C734 /* EmailVerificationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailVerificationVC.xib; sourceTree = "<group>"; };
 		BC564A672F3AFD7C0069C734 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		BC564A682F3AFD7C0069C734 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
+		BC564F062F4325FA00D4DA1C /* PersonalDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataVC.swift; sourceTree = "<group>"; };
+		BC564F072F4325FA00D4DA1C /* PersonalDataVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalDataVC.xib; sourceTree = "<group>"; };
+		BC564F0C2F433AA600D4DA1C /* PayrollAndTaxVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayrollAndTaxVC.swift; sourceTree = "<group>"; };
+		BC564F0D2F433AA600D4DA1C /* PayrollAndTaxVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayrollAndTaxVC.xib; sourceTree = "<group>"; };
 		BC575D812F43199B00124CF5 /* LogoutPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutPopUp.swift; sourceTree = "<group>"; };
 		BC575D822F43199B00124CF5 /* LogoutPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoutPopUp.xib; sourceTree = "<group>"; };
 		BC5D2D4E2F3C377200A81E90 /* CheckInAndOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInAndOutVC.swift; sourceTree = "<group>"; };
@@ -611,6 +623,9 @@
 		BC2792452F3C9773009A3E3A /* SubView */ = {
 			isa = PBXGroup;
 			children = (
+				BC31B4C62F4347760062BE4F /* Salary Calculation */,
+				BC564F0A2F433A8F00D4DA1C /* Payroll & Tax */,
+				BC564F042F4325DD00D4DA1C /* Personal Data */,
 				BC575D7F2F43194400124CF5 /* Logout Popup */,
 				BC09FF902F42F34300A760EC /* Change Password */,
 				BC2792462F3C977D009A3E3A /* Apply Leave */,
@@ -660,6 +675,23 @@
 				BC0CA8AB2F3EDCCC00EDAFB1 /* SenderChatTVCell */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		BC31B4C62F4347760062BE4F /* Salary Calculation */ = {
+			isa = PBXGroup;
+			children = (
+				BC31B4C72F43477C0062BE4F /* View */,
+			);
+			path = "Salary Calculation";
+			sourceTree = "<group>";
+		};
+		BC31B4C72F43477C0062BE4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC31B4C82F43478F0062BE4F /* SalaryCalculationVC.swift */,
+				BC31B4C92F43478F0062BE4F /* SalaryCalculationVC.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BC4B39B82F3B114F00311438 /* SubView */ = {
@@ -780,6 +812,40 @@
 			children = (
 				BC564A672F3AFD7C0069C734 /* ForgotPasswordVC.swift */,
 				BC564A682F3AFD7C0069C734 /* ForgotPasswordVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC564F042F4325DD00D4DA1C /* Personal Data */ = {
+			isa = PBXGroup;
+			children = (
+				BC564F052F4325E300D4DA1C /* View */,
+			);
+			path = "Personal Data";
+			sourceTree = "<group>";
+		};
+		BC564F052F4325E300D4DA1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC564F062F4325FA00D4DA1C /* PersonalDataVC.swift */,
+				BC564F072F4325FA00D4DA1C /* PersonalDataVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC564F0A2F433A8F00D4DA1C /* Payroll & Tax */ = {
+			isa = PBXGroup;
+			children = (
+				BC564F0B2F433A9500D4DA1C /* View */,
+			);
+			path = "Payroll & Tax";
+			sourceTree = "<group>";
+		};
+		BC564F0B2F433A9500D4DA1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC564F0C2F433AA600D4DA1C /* PayrollAndTaxVC.swift */,
+				BC564F0D2F433AA600D4DA1C /* PayrollAndTaxVC.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1036,9 +1102,11 @@
 				BC5D2D5A2F3C3AEB00A81E90 /* AttendanceVC.xib in Resources */,
 				BC5D2D5F2F3C3C5000A81E90 /* ProfileVC.xib in Resources */,
 				BCCAB3D82F3DECBA00CC541E /* ChatVC.xib in Resources */,
+				BC564F0E2F433AA600D4DA1C /* PayrollAndTaxVC.xib in Resources */,
 				0A735F862F39CD9A00B17AB4 /* Roboto-Medium.ttf in Resources */,
 				0A735F872F39CD9A00B17AB4 /* Roboto-Regular.ttf in Resources */,
 				BC09FF8E2F42E44600A760EC /* UpcomingShiftsTVCell.xib in Resources */,
+				BC564F082F4325FA00D4DA1C /* PersonalDataVC.xib in Resources */,
 				0A735F8C2F39CD9A00B17AB4 /* Roboto-BlackItalic.ttf in Resources */,
 				0A735F8D2F39CD9A00B17AB4 /* Roboto-Black.ttf in Resources */,
 				BC21A0902F3B5B3600CD7571 /* HomeVC.xib in Resources */,
@@ -1061,6 +1129,7 @@
 				0A735FA22F39CD9A00B17AB4 /* Roboto-ExtraLight.ttf in Resources */,
 				0A735FA92F39CD9A00B17AB4 /* Roboto-Italic.ttf in Resources */,
 				BC5D2D512F3C377200A81E90 /* CheckInAndOutVC.xib in Resources */,
+				BC31B4CB2F43478F0062BE4F /* SalaryCalculationVC.xib in Resources */,
 				0A735FAC2F39CD9A00B17AB4 /* Roboto-SemiBold.ttf in Resources */,
 				0A735FAE2F39CD9A00B17AB4 /* Roboto-Light.ttf in Resources */,
 				BC564A5D2F3AE2910069C734 /* UploadSignatureVC.xib in Resources */,
@@ -1093,6 +1162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC30D9052F3E047A0023EC5F /* UserChatVC.swift in Sources */,
+				BC31B4CA2F43478F0062BE4F /* SalaryCalculationVC.swift in Sources */,
 				0A735F092F39BD0B00B17AB4 /* AppDelegate.swift in Sources */,
 				0A735F0B2F39BD0B00B17AB4 /* ViewController.swift in Sources */,
 				BC564A5E2F3AE2910069C734 /* UploadSignatureVC.swift in Sources */,
@@ -1120,6 +1190,7 @@
 				0AAE66102F39E61700CEF8C5 /* PhoneLoginVC.swift in Sources */,
 				BC21A0912F3B5B3600CD7571 /* HomeVC.swift in Sources */,
 				0A735F302F39BD8C00B17AB4 /* String+Extention.swift in Sources */,
+				BC564F0F2F433AA600D4DA1C /* PayrollAndTaxVC.swift in Sources */,
 				0A735F312F39BD8C00B17AB4 /* AppTextField.swift in Sources */,
 				0A735F322F39BD8C00B17AB4 /* AppConstants.swift in Sources */,
 				0A735F332F39BD8C00B17AB4 /* AppTextView.swift in Sources */,
@@ -1137,6 +1208,7 @@
 				BCCAB3DD2F3DF44700CC541E /* ChatListTVCell.swift in Sources */,
 				BC4B39BD2F3B11E300311438 /* VerifyForgotPasswordVC.swift in Sources */,
 				BC575D832F43199B00124CF5 /* LogoutPopUp.swift in Sources */,
+				BC564F092F4325FA00D4DA1C /* PersonalDataVC.swift in Sources */,
 				0A735F392F39BD8C00B17AB4 /* AppLabel.swift in Sources */,
 				0A735F3A2F39BD8C00B17AB4 /* AGDesignable.swift in Sources */,
 				0A735F3B2F39BD8C00B17AB4 /* PickerViewViewController.swift in Sources */,
