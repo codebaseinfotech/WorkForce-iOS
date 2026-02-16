@@ -95,6 +95,8 @@
 		BC564A642F3AEEEF0069C734 /* EmailVerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC564A612F3AEEEF0069C734 /* EmailVerificationVC.swift */; };
 		BC564A692F3AFD7C0069C734 /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC564A682F3AFD7C0069C734 /* ForgotPasswordVC.xib */; };
 		BC564A6A2F3AFD7C0069C734 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC564A672F3AFD7C0069C734 /* ForgotPasswordVC.swift */; };
+		BC575D832F43199B00124CF5 /* LogoutPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC575D812F43199B00124CF5 /* LogoutPopUp.swift */; };
+		BC575D842F43199B00124CF5 /* LogoutPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC575D822F43199B00124CF5 /* LogoutPopUp.xib */; };
 		BC5D2D502F3C377200A81E90 /* CheckInAndOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5D2D4E2F3C377200A81E90 /* CheckInAndOutVC.swift */; };
 		BC5D2D512F3C377200A81E90 /* CheckInAndOutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5D2D4F2F3C377200A81E90 /* CheckInAndOutVC.xib */; };
 		BC5D2D552F3C398600A81E90 /* TaskVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5D2D542F3C398600A81E90 /* TaskVC.xib */; };
@@ -202,6 +204,8 @@
 		BC564A622F3AEEEF0069C734 /* EmailVerificationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailVerificationVC.xib; sourceTree = "<group>"; };
 		BC564A672F3AFD7C0069C734 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		BC564A682F3AFD7C0069C734 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
+		BC575D812F43199B00124CF5 /* LogoutPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutPopUp.swift; sourceTree = "<group>"; };
+		BC575D822F43199B00124CF5 /* LogoutPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoutPopUp.xib; sourceTree = "<group>"; };
 		BC5D2D4E2F3C377200A81E90 /* CheckInAndOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInAndOutVC.swift; sourceTree = "<group>"; };
 		BC5D2D4F2F3C377200A81E90 /* CheckInAndOutVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckInAndOutVC.xib; sourceTree = "<group>"; };
 		BC5D2D532F3C398600A81E90 /* TaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskVC.swift; sourceTree = "<group>"; };
@@ -607,6 +611,7 @@
 		BC2792452F3C9773009A3E3A /* SubView */ = {
 			isa = PBXGroup;
 			children = (
+				BC575D7F2F43194400124CF5 /* Logout Popup */,
 				BC09FF902F42F34300A760EC /* Change Password */,
 				BC2792462F3C977D009A3E3A /* Apply Leave */,
 			);
@@ -775,6 +780,23 @@
 			children = (
 				BC564A672F3AFD7C0069C734 /* ForgotPasswordVC.swift */,
 				BC564A682F3AFD7C0069C734 /* ForgotPasswordVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC575D7F2F43194400124CF5 /* Logout Popup */ = {
+			isa = PBXGroup;
+			children = (
+				BC575D802F43197D00124CF5 /* View */,
+			);
+			path = "Logout Popup";
+			sourceTree = "<group>";
+		};
+		BC575D802F43197D00124CF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC575D812F43199B00124CF5 /* LogoutPopUp.swift */,
+				BC575D822F43199B00124CF5 /* LogoutPopUp.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1028,6 +1050,7 @@
 				BC30D9042F3E047A0023EC5F /* UserChatVC.xib in Resources */,
 				0A735F902F39CD9A00B17AB4 /* Roboto-Thin.ttf in Resources */,
 				BC564A632F3AEEEF0069C734 /* EmailVerificationVC.xib in Resources */,
+				BC575D842F43199B00124CF5 /* LogoutPopUp.xib in Resources */,
 				BC09FF942F42F38000A760EC /* ChangePasswordVC.xib in Resources */,
 				0A735F912F39CD9A00B17AB4 /* Roboto-ExtraBoldItalic.ttf in Resources */,
 				0ADC9D2A2F39EFC000A9F0E0 /* EmployeeLoginVC.xib in Resources */,
@@ -1113,6 +1136,7 @@
 				0A735F382F39BD8C00B17AB4 /* UITextField+Extention.swift in Sources */,
 				BCCAB3DD2F3DF44700CC541E /* ChatListTVCell.swift in Sources */,
 				BC4B39BD2F3B11E300311438 /* VerifyForgotPasswordVC.swift in Sources */,
+				BC575D832F43199B00124CF5 /* LogoutPopUp.swift in Sources */,
 				0A735F392F39BD8C00B17AB4 /* AppLabel.swift in Sources */,
 				0A735F3A2F39BD8C00B17AB4 /* AGDesignable.swift in Sources */,
 				0A735F3B2F39BD8C00B17AB4 /* PickerViewViewController.swift in Sources */,

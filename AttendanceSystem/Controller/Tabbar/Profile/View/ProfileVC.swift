@@ -75,9 +75,17 @@ class ProfileVC: UIViewController {
     }
     
     @IBAction func tappedLogout(_ sender: Any) {
+        let vc = LogoutPopUp()
+        vc.modalPresentationStyle = .overFullScreen
+        vc.screen = .logout
+        self.present(vc, animated: false)
     }
     
     @IBAction func tappedDeleteAccount(_ sender: Any) {
+        let vc = LogoutPopUp()
+        vc.modalPresentationStyle = .overFullScreen
+        vc.screen = .delete
+        self.present(vc, animated: false)
     }
     
     
