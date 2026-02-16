@@ -53,6 +53,17 @@ class AttendanceVC: UIViewController {
         navigationController?.pushViewController(vc, animated: false)
     }
     
+    // MARK: - Actions
+    @IBAction func tappedChat(_ sender: Any) {
+        let vc = ChatVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func tappedNotification(_ sender: Any) {
+        let vc = NotificationVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     // MARK: - TV height set
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if(keyPath == "contentSize"){

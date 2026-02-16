@@ -69,6 +69,10 @@
 		0ADC9D2F2F39F5D300A9F0E0 /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ADC9D2E2F39F5D300A9F0E0 /* SignUpVC.xib */; };
 		0ADC9D302F39F5D300A9F0E0 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC9D2D2F39F5D300A9F0E0 /* SignUpVC.swift */; };
 		0ADC9D332F39F88500A9F0E0 /* SignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC9D312F39F88500A9F0E0 /* SignatureView.swift */; };
+		BC09FF8E2F42E44600A760EC /* UpcomingShiftsTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC09FF8D2F42E44600A760EC /* UpcomingShiftsTVCell.xib */; };
+		BC09FF8F2F42E44600A760EC /* UpcomingShiftsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09FF8C2F42E44600A760EC /* UpcomingShiftsTVCell.swift */; };
+		BC09FF942F42F38000A760EC /* ChangePasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC09FF932F42F38000A760EC /* ChangePasswordVC.xib */; };
+		BC09FF952F42F38000A760EC /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09FF922F42F38000A760EC /* ChangePasswordVC.swift */; };
 		BC0CA8AC2F3EDCCC00EDAFB1 /* ReciverChatTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0CA8A62F3EDCCC00EDAFB1 /* ReciverChatTVCell.swift */; };
 		BC0CA8AD2F3EDCCC00EDAFB1 /* SenderChatTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0CA8A92F3EDCCC00EDAFB1 /* SenderChatTVCell.swift */; };
 		BC0CA8AE2F3EDCCC00EDAFB1 /* SenderChatTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0CA8AA2F3EDCCC00EDAFB1 /* SenderChatTVCell.xib */; };
@@ -172,6 +176,10 @@
 		0ADC9D2D2F39F5D300A9F0E0 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		0ADC9D2E2F39F5D300A9F0E0 /* SignUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
 		0ADC9D312F39F88500A9F0E0 /* SignatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureView.swift; sourceTree = "<group>"; };
+		BC09FF8C2F42E44600A760EC /* UpcomingShiftsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingShiftsTVCell.swift; sourceTree = "<group>"; };
+		BC09FF8D2F42E44600A760EC /* UpcomingShiftsTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingShiftsTVCell.xib; sourceTree = "<group>"; };
+		BC09FF922F42F38000A760EC /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
+		BC09FF932F42F38000A760EC /* ChangePasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordVC.xib; sourceTree = "<group>"; };
 		BC0CA8A62F3EDCCC00EDAFB1 /* ReciverChatTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciverChatTVCell.swift; sourceTree = "<group>"; };
 		BC0CA8A72F3EDCCC00EDAFB1 /* ReciverChatTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReciverChatTVCell.xib; sourceTree = "<group>"; };
 		BC0CA8A92F3EDCCC00EDAFB1 /* SenderChatTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderChatTVCell.swift; sourceTree = "<group>"; };
@@ -514,6 +522,40 @@
 			path = SignatureView;
 			sourceTree = "<group>";
 		};
+		BC09FF8A2F42E3EA00A760EC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BC09FF8B2F42E3F300A760EC /* Upcoming Shifts */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BC09FF8B2F42E3F300A760EC /* Upcoming Shifts */ = {
+			isa = PBXGroup;
+			children = (
+				BC09FF8C2F42E44600A760EC /* UpcomingShiftsTVCell.swift */,
+				BC09FF8D2F42E44600A760EC /* UpcomingShiftsTVCell.xib */,
+			);
+			path = "Upcoming Shifts";
+			sourceTree = "<group>";
+		};
+		BC09FF902F42F34300A760EC /* Change Password */ = {
+			isa = PBXGroup;
+			children = (
+				BC09FF912F42F35E00A760EC /* View */,
+			);
+			path = "Change Password";
+			sourceTree = "<group>";
+		};
+		BC09FF912F42F35E00A760EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC09FF922F42F38000A760EC /* ChangePasswordVC.swift */,
+				BC09FF932F42F38000A760EC /* ChangePasswordVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		BC0CA8A82F3EDCCC00EDAFB1 /* ReciverChatTVCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -565,6 +607,7 @@
 		BC2792452F3C9773009A3E3A /* SubView */ = {
 			isa = PBXGroup;
 			children = (
+				BC09FF902F42F34300A760EC /* Change Password */,
 				BC2792462F3C977D009A3E3A /* Apply Leave */,
 			);
 			path = SubView;
@@ -739,6 +782,7 @@
 		BC5D2D492F3C36F400A81E90 /* CheckIn */ = {
 			isa = PBXGroup;
 			children = (
+				BC09FF8A2F42E3EA00A760EC /* Cell */,
 				BC5D2D4D2F3C372300A81E90 /* View */,
 			);
 			path = CheckIn;
@@ -972,6 +1016,7 @@
 				BCCAB3D82F3DECBA00CC541E /* ChatVC.xib in Resources */,
 				0A735F862F39CD9A00B17AB4 /* Roboto-Medium.ttf in Resources */,
 				0A735F872F39CD9A00B17AB4 /* Roboto-Regular.ttf in Resources */,
+				BC09FF8E2F42E44600A760EC /* UpcomingShiftsTVCell.xib in Resources */,
 				0A735F8C2F39CD9A00B17AB4 /* Roboto-BlackItalic.ttf in Resources */,
 				0A735F8D2F39CD9A00B17AB4 /* Roboto-Black.ttf in Resources */,
 				BC21A0902F3B5B3600CD7571 /* HomeVC.xib in Resources */,
@@ -983,6 +1028,7 @@
 				BC30D9042F3E047A0023EC5F /* UserChatVC.xib in Resources */,
 				0A735F902F39CD9A00B17AB4 /* Roboto-Thin.ttf in Resources */,
 				BC564A632F3AEEEF0069C734 /* EmailVerificationVC.xib in Resources */,
+				BC09FF942F42F38000A760EC /* ChangePasswordVC.xib in Resources */,
 				0A735F912F39CD9A00B17AB4 /* Roboto-ExtraBoldItalic.ttf in Resources */,
 				0ADC9D2A2F39EFC000A9F0E0 /* EmployeeLoginVC.xib in Resources */,
 				0A735F942F39CD9A00B17AB4 /* Roboto-ExtraBold.ttf in Resources */,
@@ -1045,6 +1091,7 @@
 				0ADC9D292F39EFC000A9F0E0 /* EmployeeLoginVC.swift in Sources */,
 				0A735F2D2F39BD8C00B17AB4 /* VideoPicker.swift in Sources */,
 				0A735F2E2F39BD8C00B17AB4 /* UIFont+Extention.swift in Sources */,
+				BC09FF952F42F38000A760EC /* ChangePasswordVC.swift in Sources */,
 				0A735F2F2F39BD8C00B17AB4 /* ImagePicker.swift in Sources */,
 				BC27924A2F3C97BC009A3E3A /* ApplyLeaveVC.swift in Sources */,
 				0AAE66102F39E61700CEF8C5 /* PhoneLoginVC.swift in Sources */,
@@ -1057,6 +1104,7 @@
 				0A735FC62F39D55000B17AB4 /* EmailLoginVC.swift in Sources */,
 				0A735F352F39BD8C00B17AB4 /* UIView+Extention.swift in Sources */,
 				0A735F362F39BD8C00B17AB4 /* NetConnection.swift in Sources */,
+				BC09FF8F2F42E44600A760EC /* UpcomingShiftsTVCell.swift in Sources */,
 				BC4B39C42F3B2A0100311438 /* NewPasswordVC.swift in Sources */,
 				0ADC9D232F39EBAE00A9F0E0 /* OTPTextField.swift in Sources */,
 				BC5D2D602F3C3C5000A81E90 /* ProfileVC.swift in Sources */,

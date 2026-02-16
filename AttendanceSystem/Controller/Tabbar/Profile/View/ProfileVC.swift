@@ -64,6 +64,8 @@ class ProfileVC: UIViewController {
     }
     
     @IBAction func tappedChangePass(_ sender: Any) {
+        let vc = ChangePasswordVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func tappedVersioning(_ sender: Any) {
