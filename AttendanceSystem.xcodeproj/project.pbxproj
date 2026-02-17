@@ -111,6 +111,14 @@
 		BC5D2D5B2F3C3AEB00A81E90 /* AttendanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5D2D582F3C3AEB00A81E90 /* AttendanceVC.swift */; };
 		BC5D2D5F2F3C3C5000A81E90 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5D2D5E2F3C3C5000A81E90 /* ProfileVC.xib */; };
 		BC5D2D602F3C3C5000A81E90 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5D2D5D2F3C3C5000A81E90 /* ProfileVC.swift */; };
+		BC72EBC52F44772300760325 /* LeaveRequestListTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC72EBC42F44772300760325 /* LeaveRequestListTVCell.xib */; };
+		BC72EBC62F44772300760325 /* LeaveRequestListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC72EBC32F44772300760325 /* LeaveRequestListTVCell.swift */; };
+		BC83326D2F441FD2008011E0 /* HelpAndFAQs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC83326B2F441FD2008011E0 /* HelpAndFAQs.swift */; };
+		BC83326E2F441FD2008011E0 /* HelpAndFAQs.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC83326C2F441FD2008011E0 /* HelpAndFAQs.xib */; };
+		BC8332722F442346008011E0 /* FAQsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8332702F442346008011E0 /* FAQsTVCell.swift */; };
+		BC8332732F442346008011E0 /* FAQsTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC8332712F442346008011E0 /* FAQsTVCell.xib */; };
+		BC8332792F444386008011E0 /* AttendanceDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8332772F444386008011E0 /* AttendanceDetailsVC.swift */; };
+		BC83327A2F444386008011E0 /* AttendanceDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC8332782F444386008011E0 /* AttendanceDetailsVC.xib */; };
 		BCCAB3D82F3DECBA00CC541E /* ChatVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCAB3D72F3DECBA00CC541E /* ChatVC.xib */; };
 		BCCAB3D92F3DECBA00CC541E /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCAB3D62F3DECBA00CC541E /* ChatVC.swift */; };
 		BCCAB3DD2F3DF44700CC541E /* ChatListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCAB3DB2F3DF44700CC541E /* ChatListTVCell.swift */; };
@@ -121,6 +129,8 @@
 		BCCFCBC12F3DA06600A2988B /* NotificationListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCFCBBE2F3DA06600A2988B /* NotificationListTVCell.swift */; };
 		BCCFCBC82F3DB05100A2988B /* AttendanceListTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCFCBC72F3DB05100A2988B /* AttendanceListTVCell.xib */; };
 		BCCFCBC92F3DB05100A2988B /* AttendanceListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCFCBC62F3DB05100A2988B /* AttendanceListTVCell.swift */; };
+		BCF82FE32F44675A006F04E7 /* LeaveRequestsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF82FE12F44675A006F04E7 /* LeaveRequestsVC.swift */; };
+		BCF82FE42F44675A006F04E7 /* LeaveRequestsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF82FE22F44675A006F04E7 /* LeaveRequestsVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -226,6 +236,14 @@
 		BC5D2D592F3C3AEB00A81E90 /* AttendanceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttendanceVC.xib; sourceTree = "<group>"; };
 		BC5D2D5D2F3C3C5000A81E90 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		BC5D2D5E2F3C3C5000A81E90 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
+		BC72EBC32F44772300760325 /* LeaveRequestListTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveRequestListTVCell.swift; sourceTree = "<group>"; };
+		BC72EBC42F44772300760325 /* LeaveRequestListTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaveRequestListTVCell.xib; sourceTree = "<group>"; };
+		BC83326B2F441FD2008011E0 /* HelpAndFAQs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpAndFAQs.swift; sourceTree = "<group>"; };
+		BC83326C2F441FD2008011E0 /* HelpAndFAQs.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpAndFAQs.xib; sourceTree = "<group>"; };
+		BC8332702F442346008011E0 /* FAQsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQsTVCell.swift; sourceTree = "<group>"; };
+		BC8332712F442346008011E0 /* FAQsTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FAQsTVCell.xib; sourceTree = "<group>"; };
+		BC8332772F444386008011E0 /* AttendanceDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceDetailsVC.swift; sourceTree = "<group>"; };
+		BC8332782F444386008011E0 /* AttendanceDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttendanceDetailsVC.xib; sourceTree = "<group>"; };
 		BCCAB3D62F3DECBA00CC541E /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		BCCAB3D72F3DECBA00CC541E /* ChatVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatVC.xib; sourceTree = "<group>"; };
 		BCCAB3DB2F3DF44700CC541E /* ChatListTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTVCell.swift; sourceTree = "<group>"; };
@@ -236,6 +254,8 @@
 		BCCFCBBF2F3DA06600A2988B /* NotificationListTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationListTVCell.xib; sourceTree = "<group>"; };
 		BCCFCBC62F3DB05100A2988B /* AttendanceListTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceListTVCell.swift; sourceTree = "<group>"; };
 		BCCFCBC72F3DB05100A2988B /* AttendanceListTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttendanceListTVCell.xib; sourceTree = "<group>"; };
+		BCF82FE12F44675A006F04E7 /* LeaveRequestsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveRequestsVC.swift; sourceTree = "<group>"; };
+		BCF82FE22F44675A006F04E7 /* LeaveRequestsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaveRequestsVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -623,6 +643,8 @@
 		BC2792452F3C9773009A3E3A /* SubView */ = {
 			isa = PBXGroup;
 			children = (
+				BCF82FDF2F446732006F04E7 /* Leave Requests */,
+				BC8332692F441F5D008011E0 /* Help & FAQs */,
 				BC31B4C62F4347760062BE4F /* Salary Calculation */,
 				BC564F0A2F433A8F00D4DA1C /* Payroll & Tax */,
 				BC564F042F4325DD00D4DA1C /* Personal Data */,
@@ -887,6 +909,7 @@
 		BC5D2D4B2F3C370700A81E90 /* Attendance */ = {
 			isa = PBXGroup;
 			children = (
+				BC8332742F444309008011E0 /* SubView */,
 				BCCFCBC42F3DAF5A00A2988B /* Cell */,
 				BC5D2D572F3C3AD500A81E90 /* View */,
 			);
@@ -934,6 +957,67 @@
 			children = (
 				BC5D2D5D2F3C3C5000A81E90 /* ProfileVC.swift */,
 				BC5D2D5E2F3C3C5000A81E90 /* ProfileVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC72EBC12F4476D900760325 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BC72EBC32F44772300760325 /* LeaveRequestListTVCell.swift */,
+				BC72EBC42F44772300760325 /* LeaveRequestListTVCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BC8332692F441F5D008011E0 /* Help & FAQs */ = {
+			isa = PBXGroup;
+			children = (
+				BC83326F2F442316008011E0 /* Cell */,
+				BC83326A2F441F93008011E0 /* View */,
+			);
+			path = "Help & FAQs";
+			sourceTree = "<group>";
+		};
+		BC83326A2F441F93008011E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC83326B2F441FD2008011E0 /* HelpAndFAQs.swift */,
+				BC83326C2F441FD2008011E0 /* HelpAndFAQs.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC83326F2F442316008011E0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BC8332702F442346008011E0 /* FAQsTVCell.swift */,
+				BC8332712F442346008011E0 /* FAQsTVCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BC8332742F444309008011E0 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				BC8332752F444340008011E0 /* Attendance Details */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		BC8332752F444340008011E0 /* Attendance Details */ = {
+			isa = PBXGroup;
+			children = (
+				BC8332762F444359008011E0 /* View */,
+			);
+			path = "Attendance Details";
+			sourceTree = "<group>";
+		};
+		BC8332762F444359008011E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC8332772F444386008011E0 /* AttendanceDetailsVC.swift */,
+				BC8332782F444386008011E0 /* AttendanceDetailsVC.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1027,6 +1111,24 @@
 			path = AttendanceListTVCell;
 			sourceTree = "<group>";
 		};
+		BCF82FDF2F446732006F04E7 /* Leave Requests */ = {
+			isa = PBXGroup;
+			children = (
+				BC72EBC12F4476D900760325 /* Cell */,
+				BCF82FE02F44673D006F04E7 /* View */,
+			);
+			path = "Leave Requests";
+			sourceTree = "<group>";
+		};
+		BCF82FE02F44673D006F04E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCF82FE12F44675A006F04E7 /* LeaveRequestsVC.swift */,
+				BCF82FE22F44675A006F04E7 /* LeaveRequestsVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1109,9 +1211,11 @@
 				BC564F082F4325FA00D4DA1C /* PersonalDataVC.xib in Resources */,
 				0A735F8C2F39CD9A00B17AB4 /* Roboto-BlackItalic.ttf in Resources */,
 				0A735F8D2F39CD9A00B17AB4 /* Roboto-Black.ttf in Resources */,
+				BC72EBC52F44772300760325 /* LeaveRequestListTVCell.xib in Resources */,
 				BC21A0902F3B5B3600CD7571 /* HomeVC.xib in Resources */,
 				BCCAB3DE2F3DF44700CC541E /* ChatListTVCell.xib in Resources */,
 				0A735F8F2F39CD9A00B17AB4 /* Roboto-MediumItalic.ttf in Resources */,
+				BC83327A2F444386008011E0 /* AttendanceDetailsVC.xib in Resources */,
 				BC5D2D552F3C398600A81E90 /* TaskVC.xib in Resources */,
 				0AAE66112F39E61700CEF8C5 /* PhoneLoginVC.xib in Resources */,
 				BCCFCBBA2F3D9EA900A2988B /* NotificationVC.xib in Resources */,
@@ -1121,12 +1225,14 @@
 				BC575D842F43199B00124CF5 /* LogoutPopUp.xib in Resources */,
 				BC09FF942F42F38000A760EC /* ChangePasswordVC.xib in Resources */,
 				0A735F912F39CD9A00B17AB4 /* Roboto-ExtraBoldItalic.ttf in Resources */,
+				BC83326E2F441FD2008011E0 /* HelpAndFAQs.xib in Resources */,
 				0ADC9D2A2F39EFC000A9F0E0 /* EmployeeLoginVC.xib in Resources */,
 				0A735F942F39CD9A00B17AB4 /* Roboto-ExtraBold.ttf in Resources */,
 				0A735F992F39CD9A00B17AB4 /* Roboto-Bold.ttf in Resources */,
 				0A735F9B2F39CD9A00B17AB4 /* Roboto-BoldItalic.ttf in Resources */,
 				0A735FC02F39CDF800B17AB4 /* OnboardVC.xib in Resources */,
 				0A735FA22F39CD9A00B17AB4 /* Roboto-ExtraLight.ttf in Resources */,
+				BCF82FE42F44675A006F04E7 /* LeaveRequestsVC.xib in Resources */,
 				0A735FA92F39CD9A00B17AB4 /* Roboto-Italic.ttf in Resources */,
 				BC5D2D512F3C377200A81E90 /* CheckInAndOutVC.xib in Resources */,
 				BC31B4CB2F43478F0062BE4F /* SalaryCalculationVC.xib in Resources */,
@@ -1138,6 +1244,7 @@
 				BC564A692F3AFD7C0069C734 /* ForgotPasswordVC.xib in Resources */,
 				0ADC9D2F2F39F5D300A9F0E0 /* SignUpVC.xib in Resources */,
 				BC4B39C32F3B2A0100311438 /* NewPasswordVC.xib in Resources */,
+				BC8332732F442346008011E0 /* FAQsTVCell.xib in Resources */,
 				BC0CA8AE2F3EDCCC00EDAFB1 /* SenderChatTVCell.xib in Resources */,
 				BC0CA8AF2F3EDCCC00EDAFB1 /* ReciverChatTVCell.xib in Resources */,
 				0AAE66172F39E99500CEF8C5 /* VerifyPhoneVC.xib in Resources */,
@@ -1173,7 +1280,9 @@
 				BC564A6A2F3AFD7C0069C734 /* ForgotPasswordVC.swift in Sources */,
 				BCCFCBC92F3DB05100A2988B /* AttendanceListTVCell.swift in Sources */,
 				0A735F2B2F39BD8C00B17AB4 /* APIClient.swift in Sources */,
+				BC8332722F442346008011E0 /* FAQsTVCell.swift in Sources */,
 				0A735F2C2F39BD8C00B17AB4 /* UILabel+Extention.swift in Sources */,
+				BC83326D2F441FD2008011E0 /* HelpAndFAQs.swift in Sources */,
 				BC0CA8AC2F3EDCCC00EDAFB1 /* ReciverChatTVCell.swift in Sources */,
 				BC0CA8AD2F3EDCCC00EDAFB1 /* SenderChatTVCell.swift in Sources */,
 				0A735FBF2F39CDF800B17AB4 /* OnboardVC.swift in Sources */,
@@ -1200,6 +1309,7 @@
 				0A735F362F39BD8C00B17AB4 /* NetConnection.swift in Sources */,
 				BC09FF8F2F42E44600A760EC /* UpcomingShiftsTVCell.swift in Sources */,
 				BC4B39C42F3B2A0100311438 /* NewPasswordVC.swift in Sources */,
+				BCF82FE32F44675A006F04E7 /* LeaveRequestsVC.swift in Sources */,
 				0ADC9D232F39EBAE00A9F0E0 /* OTPTextField.swift in Sources */,
 				BC5D2D602F3C3C5000A81E90 /* ProfileVC.swift in Sources */,
 				0ADC9D242F39EBAE00A9F0E0 /* OTPFieldView.swift in Sources */,
@@ -1207,6 +1317,7 @@
 				0A735F382F39BD8C00B17AB4 /* UITextField+Extention.swift in Sources */,
 				BCCAB3DD2F3DF44700CC541E /* ChatListTVCell.swift in Sources */,
 				BC4B39BD2F3B11E300311438 /* VerifyForgotPasswordVC.swift in Sources */,
+				BC72EBC62F44772300760325 /* LeaveRequestListTVCell.swift in Sources */,
 				BC575D832F43199B00124CF5 /* LogoutPopUp.swift in Sources */,
 				BC564F092F4325FA00D4DA1C /* PersonalDataVC.swift in Sources */,
 				0A735F392F39BD8C00B17AB4 /* AppLabel.swift in Sources */,
@@ -1217,6 +1328,7 @@
 				BCCFCBC12F3DA06600A2988B /* NotificationListTVCell.swift in Sources */,
 				0ADC9D302F39F5D300A9F0E0 /* SignUpVC.swift in Sources */,
 				0A735F3C2F39BD8C00B17AB4 /* Constants.swift in Sources */,
+				BC8332792F444386008011E0 /* AttendanceDetailsVC.swift in Sources */,
 				BCCFCBBB2F3D9EA900A2988B /* NotificationVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -84,7 +84,10 @@ extension AttendanceVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tblViewAttendanceList.dequeueReusableCell(withIdentifier: "AttendanceListTVCell", for: indexPath) as! AttendanceListTVCell
         
-        cell.lblToday.isHidden = indexPath.row != 0
+        cell.onViewTapped = {
+            let vc = AttendanceDetailsVC()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
         
         return cell
     }

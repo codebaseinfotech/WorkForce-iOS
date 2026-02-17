@@ -9,7 +9,6 @@ import UIKit
 
 class AttendanceListTVCell: UITableViewCell {
     
-    @IBOutlet weak var lblToday: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var viewStatus: UIView!
     @IBOutlet weak var lblStatus: UILabel!
@@ -19,6 +18,7 @@ class AttendanceListTVCell: UITableViewCell {
     @IBOutlet weak var lblCheckOutTime: UILabel!
     @IBOutlet weak var btnView: UIButton!
     
+    var onViewTapped: (() -> Void)?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,6 +29,10 @@ class AttendanceListTVCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func btnViewTapped(_ sender: Any) {
+        onViewTapped?()
     }
     
 }

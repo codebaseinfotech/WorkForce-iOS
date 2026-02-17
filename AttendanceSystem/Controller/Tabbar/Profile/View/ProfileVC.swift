@@ -58,7 +58,7 @@ class ProfileVC: UIViewController {
     }
     
     @IBAction func tappedLeaveReq(_ sender: Any) {
-        let vc = ApplyLeaveVC()
+        let vc = LeaveRequestsVC()
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -76,6 +76,8 @@ class ProfileVC: UIViewController {
     }
     
     @IBAction func tappedFaqs(_ sender: Any) {
+        let vc = HelpAndFAQs()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func tappedLogout(_ sender: Any) {
