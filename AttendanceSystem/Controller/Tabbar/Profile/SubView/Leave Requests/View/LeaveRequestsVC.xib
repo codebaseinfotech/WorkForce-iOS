@@ -118,25 +118,25 @@
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bGg-g8-CaP">
                             <rect key="frame" x="0.0" y="0.0" width="353" height="434"/>
                             <subviews>
-                                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cTU-2u-7IT">
-                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="434"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                </tableView>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwd-U9-dks">
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cTU-2u-7IT">
                                     <rect key="frame" x="0.0" y="0.0" width="353" height="434"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </tableView>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwd-U9-dks">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="434"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="W94-39-aCy">
-                                            <rect key="frame" x="20" y="89.666666666666686" width="313" height="255"/>
+                                            <rect key="frame" x="20" y="89.666666666666686" width="200" height="255"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_noData_Leave" translatesAutoresizingMaskIntoConstraints="NO" id="yqT-1z-r7Y">
-                                                    <rect key="frame" x="56.666666666666686" y="0.0" width="200" height="220"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="220"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="200" id="7QW-nx-vVj"/>
                                                         <constraint firstAttribute="height" constant="220" id="ni0-x0-osk"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are no requests pending" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rmx-5h-NES">
-                                                    <rect key="frame" x="47.666666666666686" y="235.99999999999994" width="218" height="19"/>
+                                                    <rect key="frame" x="0.0" y="235.99999999999994" width="200" height="19"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
                                                     <color key="textColor" name="gray"/>
                                                     <nil key="highlightedColor"/>
@@ -154,13 +154,13 @@
                             </subviews>
                         </stackView>
                         <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Jgm-bF-EUO">
-                            <rect key="frame" x="0.0" y="0.0" width="240" height="434"/>
+                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="434"/>
                             <subviews>
-                                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="H3H-yL-w8w">
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="H3H-yL-w8w">
                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="434"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </tableView>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53k-ly-af0">
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53k-ly-af0">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="434"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="jhC-8o-YOI">
@@ -192,13 +192,13 @@
                             </subviews>
                         </stackView>
                         <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PX7-h0-LLJ">
-                            <rect key="frame" x="0.0" y="0.0" width="240" height="434"/>
+                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="434"/>
                             <subviews>
-                                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="h9n-qI-mnI">
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="h9n-qI-mnI">
                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="434"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </tableView>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMd-Hg-RtV">
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMd-Hg-RtV">
                                     <rect key="frame" x="0.0" y="0.0" width="240" height="434"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Gv4-4r-PC2">
@@ -247,6 +247,9 @@
                             <real key="value" value="21"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="tappedApplyLeaveRequest:" destination="-1" eventType="touchUpInside" id="NJx-j0-GT7"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

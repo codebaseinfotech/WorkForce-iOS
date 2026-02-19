@@ -30,26 +30,26 @@
                         <rect key="frame" x="20" y="8" width="280" height="88"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_notification" translatesAutoresizingMaskIntoConstraints="NO" id="oFD-gc-OI1">
-                                <rect key="frame" x="16" y="12" width="64" height="64"/>
+                                <rect key="frame" x="16" y="22" width="44" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="cqY-yA-Pdp"/>
-                                    <constraint firstAttribute="height" constant="64" id="zc2-KD-1Wk"/>
+                                    <constraint firstAttribute="width" constant="44" id="cqY-yA-Pdp"/>
+                                    <constraint firstAttribute="height" constant="44" id="zc2-KD-1Wk"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="New Task Assigned to You!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gk3-tH-Xwc">
-                                <rect key="frame" x="92" y="18" width="34.333333333333343" height="16.666666666666671"/>
+                                <rect key="frame" x="92" y="12.000000000000002" width="34.333333333333343" height="16.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMr-Os-b7a">
-                                <rect key="frame" x="234.66666666666663" y="18.666666666666668" width="29.333333333333371" height="15.333333333333332"/>
+                                <rect key="frame" x="234.66666666666663" y="12.666666666666668" width="29.333333333333371" height="15.333333333333332"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have new task for this sprint from Alicia, you can check your task “Create Onboarding Screen” by tap here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVD-aI-pmm">
-                                <rect key="frame" x="92" y="42.666666666666664" width="172" height="28.333333333333336"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="You have new task for this sprint from Alicia, you can check your task “Create Onboarding Screen” by tap here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVD-aI-pmm">
+                                <rect key="frame" x="72" y="36.666666666666657" width="192" height="56.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                 <color key="textColor" name="gray"/>
                                 <nil key="highlightedColor"/>
@@ -60,12 +60,13 @@
                             <constraint firstItem="oFD-gc-OI1" firstAttribute="centerY" secondItem="CBy-Af-dbg" secondAttribute="centerY" id="0hU-1u-55U"/>
                             <constraint firstItem="eVD-aI-pmm" firstAttribute="top" secondItem="gk3-tH-Xwc" secondAttribute="bottom" constant="8" id="4Bg-zw-zq6"/>
                             <constraint firstItem="eVD-aI-pmm" firstAttribute="leading" secondItem="oFD-gc-OI1" secondAttribute="trailing" constant="12" id="Cle-7A-mNT"/>
-                            <constraint firstItem="gk3-tH-Xwc" firstAttribute="top" secondItem="oFD-gc-OI1" secondAttribute="top" constant="6" id="EcB-4F-4Vj"/>
                             <constraint firstItem="oFD-gc-OI1" firstAttribute="leading" secondItem="CBy-Af-dbg" secondAttribute="leading" constant="16" id="Fb0-Lu-eWi"/>
                             <constraint firstAttribute="trailing" secondItem="eVD-aI-pmm" secondAttribute="trailing" constant="16" id="Fh5-Fr-xs4"/>
                             <constraint firstItem="CMr-Os-b7a" firstAttribute="centerY" secondItem="gk3-tH-Xwc" secondAttribute="centerY" id="UUF-cg-ngW"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eVD-aI-pmm" secondAttribute="bottom" constant="12" id="ifU-zk-3E3"/>
                             <constraint firstAttribute="trailing" secondItem="CMr-Os-b7a" secondAttribute="trailing" constant="16" id="jgT-vE-iN0"/>
                             <constraint firstItem="CMr-Os-b7a" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gk3-tH-Xwc" secondAttribute="trailing" constant="5" id="o2p-6Z-lTv"/>
+                            <constraint firstItem="gk3-tH-Xwc" firstAttribute="top" secondItem="CBy-Af-dbg" secondAttribute="top" constant="12" id="tDs-yu-28B"/>
                             <constraint firstItem="gk3-tH-Xwc" firstAttribute="leading" secondItem="oFD-gc-OI1" secondAttribute="trailing" constant="12" id="zuT-sj-tL3"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

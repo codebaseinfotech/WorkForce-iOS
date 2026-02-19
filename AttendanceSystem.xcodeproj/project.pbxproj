@@ -103,6 +103,8 @@
 		BC564F0F2F433AA600D4DA1C /* PayrollAndTaxVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC564F0C2F433AA600D4DA1C /* PayrollAndTaxVC.swift */; };
 		BC575D832F43199B00124CF5 /* LogoutPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC575D812F43199B00124CF5 /* LogoutPopUp.swift */; };
 		BC575D842F43199B00124CF5 /* LogoutPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC575D822F43199B00124CF5 /* LogoutPopUp.xib */; };
+		BC59EACE2F46EDEA00974023 /* RequestsDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC59EACC2F46EDEA00974023 /* RequestsDetailsVC.swift */; };
+		BC59EACF2F46EDEA00974023 /* RequestsDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC59EACD2F46EDEA00974023 /* RequestsDetailsVC.xib */; };
 		BC5D2D502F3C377200A81E90 /* CheckInAndOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5D2D4E2F3C377200A81E90 /* CheckInAndOutVC.swift */; };
 		BC5D2D512F3C377200A81E90 /* CheckInAndOutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5D2D4F2F3C377200A81E90 /* CheckInAndOutVC.xib */; };
 		BC5D2D552F3C398600A81E90 /* TaskVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5D2D542F3C398600A81E90 /* TaskVC.xib */; };
@@ -228,6 +230,8 @@
 		BC564F0D2F433AA600D4DA1C /* PayrollAndTaxVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayrollAndTaxVC.xib; sourceTree = "<group>"; };
 		BC575D812F43199B00124CF5 /* LogoutPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutPopUp.swift; sourceTree = "<group>"; };
 		BC575D822F43199B00124CF5 /* LogoutPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoutPopUp.xib; sourceTree = "<group>"; };
+		BC59EACC2F46EDEA00974023 /* RequestsDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsDetailsVC.swift; sourceTree = "<group>"; };
+		BC59EACD2F46EDEA00974023 /* RequestsDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestsDetailsVC.xib; sourceTree = "<group>"; };
 		BC5D2D4E2F3C377200A81E90 /* CheckInAndOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInAndOutVC.swift; sourceTree = "<group>"; };
 		BC5D2D4F2F3C377200A81E90 /* CheckInAndOutVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckInAndOutVC.xib; sourceTree = "<group>"; };
 		BC5D2D532F3C398600A81E90 /* TaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskVC.swift; sourceTree = "<group>"; };
@@ -889,6 +893,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BC59EACA2F46ED5700974023 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				BC59EACB2F46ED5F00974023 /* View */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		BC59EACB2F46ED5F00974023 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC59EACC2F46EDEA00974023 /* RequestsDetailsVC.swift */,
+				BC59EACD2F46EDEA00974023 /* RequestsDetailsVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		BC5D2D492F3C36F400A81E90 /* CheckIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -1114,6 +1135,7 @@
 		BCF82FDF2F446732006F04E7 /* Leave Requests */ = {
 			isa = PBXGroup;
 			children = (
+				BC59EACA2F46ED5700974023 /* SubView */,
 				BC72EBC12F4476D900760325 /* Cell */,
 				BCF82FE02F44673D006F04E7 /* View */,
 			);
@@ -1237,6 +1259,7 @@
 				BC5D2D512F3C377200A81E90 /* CheckInAndOutVC.xib in Resources */,
 				BC31B4CB2F43478F0062BE4F /* SalaryCalculationVC.xib in Resources */,
 				0A735FAC2F39CD9A00B17AB4 /* Roboto-SemiBold.ttf in Resources */,
+				BC59EACF2F46EDEA00974023 /* RequestsDetailsVC.xib in Resources */,
 				0A735FAE2F39CD9A00B17AB4 /* Roboto-Light.ttf in Resources */,
 				BC564A5D2F3AE2910069C734 /* UploadSignatureVC.xib in Resources */,
 				0A735FB12F39CD9A00B17AB4 /* Roboto-SemiBoldItalic.ttf in Resources */,
@@ -1326,6 +1349,7 @@
 				BC5D2D502F3C377200A81E90 /* CheckInAndOutVC.swift in Sources */,
 				BC564A642F3AEEEF0069C734 /* EmailVerificationVC.swift in Sources */,
 				BCCFCBC12F3DA06600A2988B /* NotificationListTVCell.swift in Sources */,
+				BC59EACE2F46EDEA00974023 /* RequestsDetailsVC.swift in Sources */,
 				0ADC9D302F39F5D300A9F0E0 /* SignUpVC.swift in Sources */,
 				0A735F3C2F39BD8C00B17AB4 /* Constants.swift in Sources */,
 				BC8332792F444386008011E0 /* AttendanceDetailsVC.swift in Sources */,

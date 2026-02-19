@@ -63,8 +63,14 @@ class LeaveRequestsVC: UIViewController {
     }
 
     @IBAction func tappedBack(_ sender: Any) {
-        
+        navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func tappedApplyLeaveRequest(_ sender: Any) {
+        let vc = ApplyLeaveVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
     private func setupSegment() {
         statusSegment.selectedSegmentIndex = 0
@@ -117,10 +123,30 @@ extension LeaveRequestsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tblViewPending.dequeueReusableCell(withIdentifier: "LeaveRequestListTVCell") as! LeaveRequestListTVCell
         
-        return cell
+        if tableView == tblViewPending {
+            let cell = self.tblViewPending.dequeueReusableCell(withIdentifier: "LeaveRequestListTVCell") as! LeaveRequestListTVCell
+            
+            return cell
+        } else if tableView == tblViewAccepted {
+            let cell = self.tblViewPending.dequeueReusableCell(withIdentifier: "LeaveRequestListTVCell") as! LeaveRequestListTVCell
+            cell.lblStatus.text = "Apporved"
+            return cell
+        } else if tableView == tblViewRejected {
+            let cell = self.tblViewPending.dequeueReusableCell(withIdentifier: "LeaveRequestListTVCell") as! LeaveRequestListTVCell
+            cell.lblStatus.text = "Rejected"
+            return cell
+        }
+        
+        return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = RequestsDetailsVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
