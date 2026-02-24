@@ -131,6 +131,8 @@
 		BCCFCBC12F3DA06600A2988B /* NotificationListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCFCBBE2F3DA06600A2988B /* NotificationListTVCell.swift */; };
 		BCCFCBC82F3DB05100A2988B /* AttendanceListTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCFCBC72F3DB05100A2988B /* AttendanceListTVCell.xib */; };
 		BCCFCBC92F3DB05100A2988B /* AttendanceListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCFCBC62F3DB05100A2988B /* AttendanceListTVCell.swift */; };
+		BCDFD9382F4D647A00391DA3 /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = BCDFD9372F4D647A00391DA3 /* HorizonCalendar */; };
+		BCDFD93B2F4D663900391DA3 /* PillDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDFD93A2F4D663900391DA3 /* PillDayView.swift */; };
 		BCF82FE32F44675A006F04E7 /* LeaveRequestsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF82FE12F44675A006F04E7 /* LeaveRequestsVC.swift */; };
 		BCF82FE42F44675A006F04E7 /* LeaveRequestsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF82FE22F44675A006F04E7 /* LeaveRequestsVC.xib */; };
 /* End PBXBuildFile section */
@@ -258,6 +260,7 @@
 		BCCFCBBF2F3DA06600A2988B /* NotificationListTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationListTVCell.xib; sourceTree = "<group>"; };
 		BCCFCBC62F3DB05100A2988B /* AttendanceListTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceListTVCell.swift; sourceTree = "<group>"; };
 		BCCFCBC72F3DB05100A2988B /* AttendanceListTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttendanceListTVCell.xib; sourceTree = "<group>"; };
+		BCDFD93A2F4D663900391DA3 /* PillDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillDayView.swift; sourceTree = "<group>"; };
 		BCF82FE12F44675A006F04E7 /* LeaveRequestsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveRequestsVC.swift; sourceTree = "<group>"; };
 		BCF82FE22F44675A006F04E7 /* LeaveRequestsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaveRequestsVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -269,6 +272,7 @@
 			files = (
 				0A735F482F39BE1600B17AB4 /* Kingfisher in Frameworks */,
 				0A735F452F39BE0300B17AB4 /* Toast in Frameworks */,
+				BCDFD9382F4D647A00391DA3 /* HorizonCalendar in Frameworks */,
 				0A735F422F39BDF000B17AB4 /* SVProgressHUD in Frameworks */,
 				0A735F3F2F39BDE000B17AB4 /* Alamofire in Frameworks */,
 			);
@@ -922,6 +926,7 @@
 		BC5D2D4A2F3C36FE00A81E90 /* Task */ = {
 			isa = PBXGroup;
 			children = (
+				BCDFD9392F4D662A00391DA3 /* PillDayView */,
 				BC5D2D522F3C396700A81E90 /* View */,
 			);
 			path = Task;
@@ -1132,6 +1137,14 @@
 			path = AttendanceListTVCell;
 			sourceTree = "<group>";
 		};
+		BCDFD9392F4D662A00391DA3 /* PillDayView */ = {
+			isa = PBXGroup;
+			children = (
+				BCDFD93A2F4D663900391DA3 /* PillDayView.swift */,
+			);
+			path = PillDayView;
+			sourceTree = "<group>";
+		};
 		BCF82FDF2F446732006F04E7 /* Leave Requests */ = {
 			isa = PBXGroup;
 			children = (
@@ -1172,6 +1185,7 @@
 				0A735F412F39BDF000B17AB4 /* SVProgressHUD */,
 				0A735F442F39BE0300B17AB4 /* Toast */,
 				0A735F472F39BE1600B17AB4 /* Kingfisher */,
+				BCDFD9372F4D647A00391DA3 /* HorizonCalendar */,
 			);
 			productName = AttendanceSystem;
 			productReference = 0A735EE72F39BD0600B17AB4 /* AttendanceSystem.app */;
@@ -1206,6 +1220,7 @@
 				0A735F402F39BDF000B17AB4 /* XCRemoteSwiftPackageReference "SVProgressHUD" */,
 				0A735F432F39BE0300B17AB4 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 				0A735F462F39BE1600B17AB4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				BCDFD9362F4D647A00391DA3 /* XCRemoteSwiftPackageReference "HorizonCalendar" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0A735EE82F39BD0600B17AB4 /* Products */;
@@ -1345,6 +1360,7 @@
 				BC564F092F4325FA00D4DA1C /* PersonalDataVC.swift in Sources */,
 				0A735F392F39BD8C00B17AB4 /* AppLabel.swift in Sources */,
 				0A735F3A2F39BD8C00B17AB4 /* AGDesignable.swift in Sources */,
+				BCDFD93B2F4D663900391DA3 /* PillDayView.swift in Sources */,
 				0A735F3B2F39BD8C00B17AB4 /* PickerViewViewController.swift in Sources */,
 				BC5D2D502F3C377200A81E90 /* CheckInAndOutVC.swift in Sources */,
 				BC564A642F3AEEEF0069C734 /* EmailVerificationVC.swift in Sources */,
@@ -1626,6 +1642,14 @@
 				minimumVersion = 8.6.2;
 			};
 		};
+		BCDFD9362F4D647A00391DA3 /* XCRemoteSwiftPackageReference "HorizonCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/HorizonCalendar.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1648,6 +1672,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0A735F462F39BE1600B17AB4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		BCDFD9372F4D647A00391DA3 /* HorizonCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCDFD9362F4D647A00391DA3 /* XCRemoteSwiftPackageReference "HorizonCalendar" */;
+			productName = HorizonCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
