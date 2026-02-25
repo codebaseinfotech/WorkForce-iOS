@@ -125,6 +125,8 @@
 		BCCAB3D92F3DECBA00CC541E /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCAB3D62F3DECBA00CC541E /* ChatVC.swift */; };
 		BCCAB3DD2F3DF44700CC541E /* ChatListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCAB3DB2F3DF44700CC541E /* ChatListTVCell.swift */; };
 		BCCAB3DE2F3DF44700CC541E /* ChatListTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCAB3DC2F3DF44700CC541E /* ChatListTVCell.xib */; };
+		BCCECC342F4EB1AC005245FB /* TaskListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCECC322F4EB1AC005245FB /* TaskListTVCell.swift */; };
+		BCCECC352F4EB1AC005245FB /* TaskListTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCECC332F4EB1AC005245FB /* TaskListTVCell.xib */; };
 		BCCFCBBA2F3D9EA900A2988B /* NotificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCFCBB92F3D9EA900A2988B /* NotificationVC.xib */; };
 		BCCFCBBB2F3D9EA900A2988B /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCFCBB82F3D9EA900A2988B /* NotificationVC.swift */; };
 		BCCFCBC02F3DA06600A2988B /* NotificationListTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCFCBBF2F3DA06600A2988B /* NotificationListTVCell.xib */; };
@@ -254,6 +256,8 @@
 		BCCAB3D72F3DECBA00CC541E /* ChatVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatVC.xib; sourceTree = "<group>"; };
 		BCCAB3DB2F3DF44700CC541E /* ChatListTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListTVCell.swift; sourceTree = "<group>"; };
 		BCCAB3DC2F3DF44700CC541E /* ChatListTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatListTVCell.xib; sourceTree = "<group>"; };
+		BCCECC322F4EB1AC005245FB /* TaskListTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTVCell.swift; sourceTree = "<group>"; };
+		BCCECC332F4EB1AC005245FB /* TaskListTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskListTVCell.xib; sourceTree = "<group>"; };
 		BCCFCBB82F3D9EA900A2988B /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
 		BCCFCBB92F3D9EA900A2988B /* NotificationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationVC.xib; sourceTree = "<group>"; };
 		BCCFCBBE2F3DA06600A2988B /* NotificationListTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListTVCell.swift; sourceTree = "<group>"; };
@@ -926,6 +930,7 @@
 		BC5D2D4A2F3C36FE00A81E90 /* Task */ = {
 			isa = PBXGroup;
 			children = (
+				BCCECC2F2F4EB159005245FB /* Cell */,
 				BCDFD9392F4D662A00391DA3 /* PillDayView */,
 				BC5D2D522F3C396700A81E90 /* View */,
 			);
@@ -1082,6 +1087,31 @@
 				BC30D8FF2F3E02C00023EC5F /* UserChat */,
 			);
 			path = SubView;
+			sourceTree = "<group>";
+		};
+		BCCECC2F2F4EB159005245FB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BCCECC302F4EB174005245FB /* TaskListTVCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BCCECC302F4EB174005245FB /* TaskListTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				BCCECC312F4EB184005245FB /* View */,
+			);
+			path = TaskListTVCell;
+			sourceTree = "<group>";
+		};
+		BCCECC312F4EB184005245FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BCCECC322F4EB1AC005245FB /* TaskListTVCell.swift */,
+				BCCECC332F4EB1AC005245FB /* TaskListTVCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BCCFCBB52F3D9E7C00A2988B /* SubView */ = {
@@ -1289,6 +1319,7 @@
 				BCCFCBC82F3DB05100A2988B /* AttendanceListTVCell.xib in Resources */,
 				BCCFCBC02F3DA06600A2988B /* NotificationListTVCell.xib in Resources */,
 				0A735FB62F39CD9A00B17AB4 /* Roboto-ExtraLightItalic.ttf in Resources */,
+				BCCECC352F4EB1AC005245FB /* TaskListTVCell.xib in Resources */,
 				0A735FB72F39CD9A00B17AB4 /* Roboto-ThinItalic.ttf in Resources */,
 				0A735F0C2F39BD0B00B17AB4 /* Assets.xcassets in Resources */,
 				0A735F0E2F39BD0B00B17AB4 /* LaunchScreen.storyboard in Resources */,
@@ -1367,6 +1398,7 @@
 				BCCFCBC12F3DA06600A2988B /* NotificationListTVCell.swift in Sources */,
 				BC59EACE2F46EDEA00974023 /* RequestsDetailsVC.swift in Sources */,
 				0ADC9D302F39F5D300A9F0E0 /* SignUpVC.swift in Sources */,
+				BCCECC342F4EB1AC005245FB /* TaskListTVCell.swift in Sources */,
 				0A735F3C2F39BD8C00B17AB4 /* Constants.swift in Sources */,
 				BC8332792F444386008011E0 /* AttendanceDetailsVC.swift in Sources */,
 				BCCFCBBB2F3D9EA900A2988B /* NotificationVC.swift in Sources */,
