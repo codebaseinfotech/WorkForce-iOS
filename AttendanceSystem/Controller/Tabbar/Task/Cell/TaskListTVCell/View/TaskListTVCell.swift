@@ -8,6 +8,17 @@
 import UIKit
 
 class TaskListTVCell: UITableViewCell {
+    
+    @IBOutlet weak var lblTaskTitle: UILabel!
+    @IBOutlet weak var lblTaskDis: UILabel!
+    @IBOutlet weak var viewPriority: UIView!
+    @IBOutlet weak var lblPriority: UILabel!
+    @IBOutlet weak var lblTaskDate: UILabel!
+    @IBOutlet weak var lblMessageCount: UILabel!
+    @IBOutlet weak var imgUser1: UIImageView!
+    @IBOutlet weak var imgUser2: UIImageView!
+    @IBOutlet weak var imgUser3: UIImageView!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
