@@ -113,7 +113,6 @@
 		BC5D2D5B2F3C3AEB00A81E90 /* AttendanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5D2D582F3C3AEB00A81E90 /* AttendanceVC.swift */; };
 		BC5D2D5F2F3C3C5000A81E90 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC5D2D5E2F3C3C5000A81E90 /* ProfileVC.xib */; };
 		BC5D2D602F3C3C5000A81E90 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5D2D5D2F3C3C5000A81E90 /* ProfileVC.swift */; };
-		BC634A362F50064D0097BB08 /* MonthStripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC634A352F50064D0097BB08 /* MonthStripVC.swift */; };
 		BC72EBC52F44772300760325 /* LeaveRequestListTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC72EBC42F44772300760325 /* LeaveRequestListTVCell.xib */; };
 		BC72EBC62F44772300760325 /* LeaveRequestListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC72EBC32F44772300760325 /* LeaveRequestListTVCell.swift */; };
 		BC83326D2F441FD2008011E0 /* HelpAndFAQs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC83326B2F441FD2008011E0 /* HelpAndFAQs.swift */; };
@@ -245,7 +244,6 @@
 		BC5D2D592F3C3AEB00A81E90 /* AttendanceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttendanceVC.xib; sourceTree = "<group>"; };
 		BC5D2D5D2F3C3C5000A81E90 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		BC5D2D5E2F3C3C5000A81E90 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
-		BC634A352F50064D0097BB08 /* MonthStripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthStripVC.swift; sourceTree = "<group>"; };
 		BC72EBC32F44772300760325 /* LeaveRequestListTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveRequestListTVCell.swift; sourceTree = "<group>"; };
 		BC72EBC42F44772300760325 /* LeaveRequestListTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaveRequestListTVCell.xib; sourceTree = "<group>"; };
 		BC83326B2F441FD2008011E0 /* HelpAndFAQs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpAndFAQs.swift; sourceTree = "<group>"; };
@@ -1173,7 +1171,6 @@
 			isa = PBXGroup;
 			children = (
 				BCDFD93A2F4D663900391DA3 /* PillDayView.swift */,
-				BC634A352F50064D0097BB08 /* MonthStripVC.swift */,
 			);
 			path = PillDayView;
 			sourceTree = "<group>";
@@ -1394,7 +1391,6 @@
 				BC564F092F4325FA00D4DA1C /* PersonalDataVC.swift in Sources */,
 				0A735F392F39BD8C00B17AB4 /* AppLabel.swift in Sources */,
 				0A735F3A2F39BD8C00B17AB4 /* AGDesignable.swift in Sources */,
-				BC634A362F50064D0097BB08 /* MonthStripVC.swift in Sources */,
 				BCDFD93B2F4D663900391DA3 /* PillDayView.swift in Sources */,
 				0A735F3B2F39BD8C00B17AB4 /* PickerViewViewController.swift in Sources */,
 				BC5D2D502F3C377200A81E90 /* CheckInAndOutVC.swift in Sources */,
