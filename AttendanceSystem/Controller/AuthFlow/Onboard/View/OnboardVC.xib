@@ -29,7 +29,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ffa-nt-hKe">
-                    <rect key="frame" x="20" y="722" width="353" height="100"/>
+                    <rect key="frame" x="20" y="780" width="353" height="42"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkJ-ZY-fS5">
                             <rect key="frame" x="0.0" y="0.0" width="353" height="42"/>
@@ -55,8 +55,8 @@
                                 <action selector="tappedSignIn:" destination="-1" eventType="touchUpInside" id="63M-Th-3eH"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKm-e8-DQf">
-                            <rect key="frame" x="0.0" y="58" width="353" height="42"/>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKm-e8-DQf">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="42"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="U6T-LF-d0x"/>
                             </constraints>
@@ -83,13 +83,13 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DRh-mG-ZLO">
-                    <rect key="frame" x="20" y="30" width="353" height="658"/>
+                    <rect key="frame" x="20" y="30" width="353" height="716"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_onborading" translatesAutoresizingMaskIntoConstraints="NO" id="ssk-ot-IVL">
-                            <rect key="frame" x="0.0" y="0.0" width="353" height="558"/>
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="616"/>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Vim-Rf-tbR">
-                            <rect key="frame" x="0.0" y="558" width="353" height="100"/>
+                            <rect key="frame" x="0.0" y="616" width="353" height="100"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Workforce Management, Made Simple" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gF3-7y-aVx">
                                     <rect key="frame" x="0.0" y="0.0" width="353" height="64.666666666666671"/>

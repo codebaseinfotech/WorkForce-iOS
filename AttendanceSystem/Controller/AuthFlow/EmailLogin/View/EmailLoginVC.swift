@@ -53,7 +53,16 @@ class EmailLoginVC: UIViewController {
     }
     @IBAction func tappedForgotPassword(_ sender: Any) {
         let vc = ForgotPasswordVC()
-        navigationController?.pushViewController(vc, animated: true)
+        if let sheet = vc.sheetPresentationController {
+            // Create a custom detent that returns a fixed height
+            let fixedDetent = UISheetPresentationController.Detent.custom(identifier: .init("fixed326")) { context in
+                return 260
+            }
+            sheet.detents = [fixedDetent]
+            sheet.prefersGrabberVisible = true
+        }
+        vc.sheetPresentationController?.delegate = self
+        self.present(vc, animated: true)
     }
     @IBAction func tappedSignIn(_ sender: Any) {
         let vc = HomeVC()
@@ -73,4 +82,17 @@ class EmailLoginVC: UIViewController {
     }
     
 
+}
+
+extension EmailLoginVC: UISheetPresentationControllerDelegate {
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        if let overlayView = view.viewWithTag(999) {
+            UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseInOut, animations: {
+                overlayView.alpha = 0
+            }, completion: { _ in
+                overlayView.removeFromSuperview()
+            })
+            
+        }
+    }
 }

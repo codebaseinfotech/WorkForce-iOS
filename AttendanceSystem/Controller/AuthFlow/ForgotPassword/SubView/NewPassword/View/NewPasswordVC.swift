@@ -47,14 +47,20 @@ class NewPasswordVC: UIViewController {
     }
     
     @IBAction func tappedSubmit(_ sender: Any) {
-        let vc = PasswordSuccessVC()
-        vc.modalPresentationStyle = .overFullScreen
-        vc.onSignIn = { [weak self] in
-            guard let self = self else { return }
-            let loginVC = EmailLoginVC()
-            self.navigationController?.setViewControllers([loginVC], animated: true)
+        guard let parentVC = self.presentingViewController else { return }
+        
+        self.dismiss(animated: true) {
+            let vc = PasswordSuccessVC()
+            vc.modalPresentationStyle = .overFullScreen
+            
+            vc.onSignIn = { [weak parentVC] in
+                guard let parentVC = parentVC else { return }
+                let loginVC = EmailLoginVC()
+                parentVC.navigationController?.setViewControllers([loginVC], animated: true)
+            }
+            
+            parentVC.present(vc, animated: false)
         }
-        self.present(vc, animated: false)
     }
     
     

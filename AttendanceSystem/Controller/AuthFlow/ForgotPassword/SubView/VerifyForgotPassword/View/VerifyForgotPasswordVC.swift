@@ -52,8 +52,27 @@ class VerifyForgotPasswordVC: UIViewController {
     }
     
     @IBAction func tappedSubmit(_ sender: Any) {
-        let vc = NewPasswordVC()
-        navigationController?.pushViewController(vc, animated: true)
+        if enteredOtp.isEmpty || enteredOtp.count < 6 {
+            setUpMakeToast(msg: "Please enter valid OTP")
+            return
+        }
+        
+        guard let parentVC = self.presentingViewController else { return }
+        
+        self.dismiss(animated: true) {
+            let vc = NewPasswordVC()
+            
+            if let sheet = vc.sheetPresentationController {
+                let fixedDetent = UISheetPresentationController.Detent.custom(identifier: .init("fixed350")) { _ in
+                    return 350
+                }
+                sheet.detents = [fixedDetent]
+                sheet.prefersGrabberVisible = true
+            }
+            
+            vc.sheetPresentationController?.delegate = parentVC as? UISheetPresentationControllerDelegate
+            parentVC.present(vc, animated: true)
+        }
     }
     
 }
@@ -72,5 +91,18 @@ extension VerifyForgotPasswordVC: OTPFieldViewDelegate {
     func enteredOTP(otp otpString: String) {
         print("OTPString: \(otpString)")
         self.enteredOtp = otpString
+    }
+}
+
+extension VerifyForgotPasswordVC: UISheetPresentationControllerDelegate {
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        if let overlayView = view.viewWithTag(999) {
+            UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseInOut, animations: {
+                overlayView.alpha = 0
+            }, completion: { _ in
+                overlayView.removeFromSuperview()
+            })
+            
+        }
     }
 }

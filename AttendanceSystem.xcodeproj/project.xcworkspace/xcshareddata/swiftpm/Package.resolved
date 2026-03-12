@@ -1,5 +1,5 @@
 {
-  "originHash" : "8de44c122f7e6411ac129b97b86bcd3def68e648a5aaec393f392f3db6717caa",
+  "originHash" : "5b3f93b1d7d9819eab878d3d7cfedae318a3148027032ac2ac1157b525d9930e",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -11,12 +11,12 @@
       }
     },
     {
-      "identity" : "horizoncalendar",
+      "identity" : "ios-maps-sdk",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/airbnb/HorizonCalendar.git",
+      "location" : "https://github.com/googlemaps/ios-maps-sdk",
       "state" : {
-        "branch" : "master",
-        "revision" : "47e451e840a6b849a0b0f136e4340f5834767ed2"
+        "revision" : "037b29b55ee9ac4d93b6a686b292e75ba4c50fe5",
+        "version" : "10.10.0"
       }
     },
     {

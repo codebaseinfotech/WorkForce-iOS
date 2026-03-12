@@ -151,6 +151,8 @@ class TaskVC: UIViewController {
     }
     
     @IBAction func tappedNewTask(_ sender: Any) {
+        let vc = NewTaskVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     

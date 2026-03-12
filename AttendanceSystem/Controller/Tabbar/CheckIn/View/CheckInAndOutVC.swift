@@ -37,6 +37,8 @@ class CheckInAndOutVC: UIViewController {
     }
     @IBOutlet weak var heightConstTblView: NSLayoutConstraint!
     
+    var arrDay = ["Tuesday", "Wednesday", "Thursday"]
+    var arrTime = ["09:00 AM - 06:00 PM", "09:00 AM - 06:00 PM", "09:00 AM - 06:00 PM"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,11 +95,14 @@ class CheckInAndOutVC: UIViewController {
 
 extension CheckInAndOutVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return arrDay.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tblViewUpcomingShift.dequeueReusableCell(withIdentifier: "UpcomingShiftsTVCell") as! UpcomingShiftsTVCell
+        
+        cell.lblUpcomingShiftDay.text = arrDay[indexPath.row]
+        cell.lblUpcomingShiftTime.text = arrTime[indexPath.row]
         
         return cell
     }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class AttendanceDetailsVC: UIViewController {
     
@@ -20,11 +21,13 @@ class AttendanceDetailsVC: UIViewController {
     @IBOutlet weak var lblHoursWorked: UILabel!
     @IBOutlet weak var lblBreak: UILabel!
     @IBOutlet weak var lblExtraHours: UILabel!
-    
+
+    private var mapView: GMSMapView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupMap()
         // Do any additional setup after loading the view.
     }
 
@@ -32,5 +35,25 @@ class AttendanceDetailsVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    private func setupMap() {
+        let camera = GMSCameraPosition.camera(
+            withLatitude: 21.1702,   // Example: Surat
+            longitude: 72.8311,
+            zoom: 15
+        )
+        
+        mapView = GMSMapView(frame: viewMap.bounds, camera: camera)
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mapView.isMyLocationEnabled = true
+        
+        viewMap.addSubview(mapView)
+        
+        // Optional marker
+//        let marker = GMSMarker()
+//        marker.position = CLLocationCoordinate2D(latitude: 21.1702, longitude: 72.8311)
+//        marker.title = "Attendance Location"
+//        marker.snippet = "Checked in here"
+//        marker.map = mapView
+    }
 
 }

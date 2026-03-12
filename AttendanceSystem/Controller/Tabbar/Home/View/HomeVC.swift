@@ -80,17 +80,33 @@ class HomeVC: UIViewController {
     }
     
     @IBAction func tappedBreakIn(_ sender: Any) {
+        let vc = SuccessPopUp()
+        vc.modalPresentationStyle = .overFullScreen
+        vc.type = .breakIn
+        self.present(vc, animated: false)
     }
     
     @IBAction func tappedCheckOut(_ sender: Any) {
+        let vc = SuccessPopUp()
+        vc.modalPresentationStyle = .overFullScreen
+        vc.type = .checkOut
+        self.present(vc, animated: false)
     }
     
     @IBAction func tappedViewTask(_ sender: Any) {
     }
     
     @IBAction func tappedCheckIn(_ sender: Any) {
+        let vc = SuccessPopUp()
+        vc.modalPresentationStyle = .overFullScreen
+        vc.type = .checkIn
+        self.present(vc, animated: false)
     }
     
     @IBAction func tappedBreakOut(_ sender: Any) {
+        let vc = SuccessPopUp()
+        vc.modalPresentationStyle = .overFullScreen
+        vc.type = .breakOut
+        self.present(vc, animated: false)
     }
 }

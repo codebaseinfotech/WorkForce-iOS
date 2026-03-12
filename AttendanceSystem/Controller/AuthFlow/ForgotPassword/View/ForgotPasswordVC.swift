@@ -48,8 +48,22 @@ class ForgotPasswordVC: UIViewController {
             return
         }
         
-        let vc = VerifyForgotPasswordVC()
-        navigationController?.pushViewController(vc, animated: true)
+        guard let parentVC = self.presentingViewController else { return }
+        
+        self.dismiss(animated: true) {
+            let vc = VerifyForgotPasswordVC()
+            
+            if let sheet = vc.sheetPresentationController {
+                let fixedDetent = UISheetPresentationController.Detent.custom(identifier: .init("fixed260")) { _ in
+                    return 260
+                }
+                sheet.detents = [fixedDetent]
+                sheet.prefersGrabberVisible = true
+            }
+            
+            vc.sheetPresentationController?.delegate = parentVC as? UISheetPresentationControllerDelegate
+            parentVC.present(vc, animated: true)
+        }
     }
     
     @objc func emailTextDidChange() {
@@ -66,7 +80,7 @@ class ForgotPasswordVC: UIViewController {
             btnSendVerification.backgroundColor = .primery
             btnSendVerification.setTitleColor(.white, for: .normal)
         } else {
-            btnSendVerification.backgroundColor = .white
+            btnSendVerification.backgroundColor = .clear
             btnSendVerification.setTitleColor(.primery, for: .normal)
         }
     }
@@ -77,4 +91,17 @@ class ForgotPasswordVC: UIViewController {
         return emailTest.evaluate(with: email)
     }
     
+}
+
+extension ForgotPasswordVC: UISheetPresentationControllerDelegate {
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        if let overlayView = view.viewWithTag(999) {
+            UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseInOut, animations: {
+                overlayView.alpha = 0
+            }, completion: { _ in
+                overlayView.removeFromSuperview()
+            })
+            
+        }
+    }
 }

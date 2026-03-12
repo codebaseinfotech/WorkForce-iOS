@@ -21,7 +21,7 @@ class PasswordSuccessVC: UIViewController {
 
     @IBAction func tappedSignIn(_ sender: Any) {
         dismiss(animated: false) { [weak self] in
-            self?.onSignIn?()
+            AppDelegate.appDelegate.setUpLogin()
         }
     }
     

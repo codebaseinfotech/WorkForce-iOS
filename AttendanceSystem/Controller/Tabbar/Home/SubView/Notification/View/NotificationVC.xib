@@ -25,6 +25,10 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdc-5g-rIK">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="118"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Acd-Aj-fJZ">
                     <rect key="frame" x="0.0" y="118" width="393" height="66"/>
                     <subviews>
@@ -84,10 +88,6 @@
                         <constraint firstItem="tW2-Do-mFW" firstAttribute="leading" secondItem="kGo-Vv-eFB" secondAttribute="trailing" constant="16" id="fHn-6p-ghT"/>
                         <constraint firstItem="kGo-Vv-eFB" firstAttribute="centerY" secondItem="Acd-Aj-fJZ" secondAttribute="centerY" id="xJy-Hj-n9G"/>
                     </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdc-5g-rIK">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="118"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LFr-Gp-Mhh">
                     <rect key="frame" x="0.0" y="184" width="393" height="668"/>
