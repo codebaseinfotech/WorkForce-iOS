@@ -30,6 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     // MARK: - Root Controllers
+    func setUpOnboarding() {
+        let nav = UINavigationController(rootViewController: OnboardVC())
+        nav.navigationBar.isHidden = true
+        window?.rootViewController = nav
+        window?.makeKeyAndVisible()
+    }
+    
     func setUpLogin() {
         let nav = UINavigationController(rootViewController: EmailLoginVC())
         nav.navigationBar.isHidden = true
