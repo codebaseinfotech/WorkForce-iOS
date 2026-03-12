@@ -50,6 +50,7 @@ class LogoutPopUp: UIViewController {
     }
     
     @IBAction func tappedLogout(_ sender: Any) {
+        AppDelegate.appDelegate.setUpLogin()
     }
     
 }

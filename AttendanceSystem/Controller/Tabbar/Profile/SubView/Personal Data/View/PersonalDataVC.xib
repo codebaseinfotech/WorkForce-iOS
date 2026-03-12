@@ -112,7 +112,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uod-8D-DqO">
                                                     <rect key="frame" x="0.0" y="0.0" width="353" height="120"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_dummy" translatesAutoresizingMaskIntoConstraints="NO" id="KkE-tP-uC5">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_dummy" translatesAutoresizingMaskIntoConstraints="NO" id="KkE-tP-uC5">
                                                             <rect key="frame" x="116.66666666666666" y="0.0" width="120" height="120"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="120" id="yXo-QN-Pj3"/>
@@ -530,6 +530,9 @@
                                                     <real key="value" value="21"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="tappedUpdateProfile:" destination="-1" eventType="touchUpInside" id="PZ7-V9-X39"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>

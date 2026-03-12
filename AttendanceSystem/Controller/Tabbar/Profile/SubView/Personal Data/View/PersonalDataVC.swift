@@ -19,5 +19,8 @@ class PersonalDataVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-
+    @IBAction func tappedUpdateProfile(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }
