@@ -13,6 +13,12 @@ enum TaskSegment: Int {
     case completed = 2
 }
 
+struct CalendarDayModel {
+    let date: String
+    let day: String
+    let fullDate: Date
+}
+
 class TaskVC: UIViewController {
     
     @IBOutlet weak var segmentControl: UISegmentedControl!
@@ -29,7 +35,7 @@ class TaskVC: UIViewController {
             tblViewInProgress.register(TaskListTVCell.nib, forCellReuseIdentifier: TaskListTVCell.identifier)
             tblViewInProgress.dataSource = self
             tblViewInProgress.delegate = self
-            tblViewInProgress.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
+            tblViewInProgress.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
         }
     }
     @IBOutlet weak var tblViewPending: UITableView! {
@@ -37,7 +43,7 @@ class TaskVC: UIViewController {
             tblViewPending.register(TaskListTVCell.nib, forCellReuseIdentifier: TaskListTVCell.identifier)
             tblViewPending.dataSource = self
             tblViewPending.delegate = self
-            tblViewPending.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
+            tblViewPending.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
         }
     }
     @IBOutlet weak var tblVIewCompleted: UITableView! {
@@ -45,7 +51,7 @@ class TaskVC: UIViewController {
             tblVIewCompleted.register(TaskListTVCell.nib, forCellReuseIdentifier: TaskListTVCell.identifier)
             tblVIewCompleted.dataSource = self
             tblVIewCompleted.delegate = self
-            tblVIewCompleted.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
+            tblVIewCompleted.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
         }
     }
     
@@ -54,12 +60,54 @@ class TaskVC: UIViewController {
     @IBOutlet weak var viewNoDataCompleted: UIView!
     
     @IBOutlet weak var viewCalander: UIView!
+    @IBOutlet weak var calendarCollectionView: UICollectionView! {
+        didSet {
+            calendarCollectionView.delegate = self
+            calendarCollectionView.dataSource = self
+            calendarCollectionView.collectionViewLayout = flowLayout
+            calendarCollectionView.register(CalendarDayCVCell.nib, forCellWithReuseIdentifier: CalendarDayCVCell.identifier)
+        }
+    }
+    @IBOutlet weak var lblMonthAndYear: UILabel!
+    
+    
+    var dates: [CalendarDayModel] = []
+    var selectedIndex: Int = 0
+    
+    let calendar = Calendar.current
+    var currentMonthDate = Date()
+    
+    let sectionInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+    let itemsPerRow: CGFloat = 1
+
+    var flowLayout: UICollectionViewFlowLayout {
+        let flowLayout = UICollectionViewFlowLayout()
+
+        DispatchQueue.main.async {
+            let paddingSpace = self.sectionInsets.left * (self.itemsPerRow + 1)
+            let availableWidth = self.calendarCollectionView.frame.width - paddingSpace
+            let widthPerItem = availableWidth / self.itemsPerRow
+
+            flowLayout.itemSize = CGSize(width: 37, height: 60)
+
+            flowLayout.sectionInset = self.sectionInsets
+            flowLayout.scrollDirection = UICollectionView.ScrollDirection.horizontal
+            flowLayout.minimumInteritemSpacing = 0
+            flowLayout.minimumLineSpacing = 6
+        }
+
+        return flowLayout
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         segmentControl.selectedSegmentIndex = 0
         updateSegmentUI(selectedIndex: 0)
+        
+        setCurrentMonthTitle()
+        generateDatesForCurrentMonth()
+        setTodaySelected()
         // Do any additional setup after loading the view.
     }
 
@@ -102,6 +150,10 @@ class TaskVC: UIViewController {
         updateSegmentUI(selectedIndex: sender.selectedSegmentIndex)
     }
     
+    @IBAction func tappedNewTask(_ sender: Any) {
+    }
+    
+    
     func updateSegmentUI(selectedIndex: Int) {
         
         guard let segment = TaskSegment(rawValue: selectedIndex) else { return }
@@ -121,6 +173,58 @@ class TaskVC: UIViewController {
             
         case .completed:
             svCompleted.isHidden = false
+        }
+    }
+    
+    func setCurrentMonthTitle() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM yyyy"
+        lblMonthAndYear.text = formatter.string(from: currentMonthDate)
+        print(formatter.string(from: currentMonthDate))
+    }
+    
+    func generateDatesForCurrentMonth() {
+        dates.removeAll()
+        
+        guard let monthRange = calendar.range(of: .day, in: .month, for: currentMonthDate),
+              let startOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: currentMonthDate)) else {
+            return
+        }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "d"
+        
+        let dayFormatter = DateFormatter()
+        dayFormatter.dateFormat = "EEE"
+        
+        for day in monthRange {
+            if let date = calendar.date(byAdding: .day, value: day - 1, to: startOfMonth) {
+                let model = CalendarDayModel(
+                    date: dateFormatter.string(from: date),
+                    day: dayFormatter.string(from: date),
+                    fullDate: date
+                )
+                dates.append(model)
+            }
+        }
+        
+        calendarCollectionView.reloadData()
+    }
+    
+    func setTodaySelected() {
+        let today = Date()
+        
+        if let index = dates.firstIndex(where: { calendar.isDate($0.fullDate, inSameDayAs: today) }) {
+            selectedIndex = index
+            
+            DispatchQueue.main.async {
+                self.calendarCollectionView.reloadData()
+                self.calendarCollectionView.scrollToItem(at: IndexPath(item: index, section: 0),
+                                                         at: .centeredHorizontally,
+                                                         animated: false)
+            }
+        } else {
+            selectedIndex = 0
         }
     }
     
@@ -158,5 +262,25 @@ extension TaskVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+}
+
+extension TaskVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dates.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = self.calendarCollectionView.dequeueReusableCell(withReuseIdentifier: "CalendarDayCVCell", for: indexPath) as! CalendarDayCVCell
+        
+        cell.configure(data: dates[indexPath.item], isSelected: selectedIndex == indexPath.item)
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedIndex = indexPath.item
+        calendarCollectionView.reloadData()
     }
 }
