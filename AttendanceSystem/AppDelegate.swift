@@ -24,7 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GMSServices.provideAPIKey("AIzaSyD4Fl5fv1u4g-96GrYYGCJmqCtTx6fs_CI")
         
-        setUpLogin()
+//        setUpLogin()
+        WFUtilites.getIsCurrntUserLogin() ? self.setUpHome() : self.setUpLogin()
         
         return true
     }

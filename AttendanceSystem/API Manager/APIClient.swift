@@ -70,26 +70,20 @@ class APIClient: NSObject {
         completionHandler: @escaping (T?, String?, Int?) -> Void
     ) {
         
-        var absoluteUrl = ""
-        if url.rawValue.contains("common/") {
-            absoluteUrl = BASE_URL + v1 + url.rawValue + pathComponent
-        } else {
-           // absoluteUrl = BASE_URL + v1 + TRUtilites.getCurrentUserType().rawValue + url.rawValue + pathComponent
-        }
-
+        var absoluteUrl = BASE_URL + url.rawValue
+       
         var headers: HTTPHeaders = [
             "Content-Type": "application/json",
             "Accept": "application/json",
-            "Language": Language.shared.currentAppLang,
-            /*"DeviceType": TRUtilites.deviceType(),
-            "DeviceID": TRUtilites.deviceID(),
-            "Latitude": "\(AppDelegate.shared.latitude ?? 0.0)",
-            "Longitude": "\(AppDelegate.shared.longitude ?? 0.0)",
-            "Device-Token": TRUtilites.getOneSignleToken()*/
+            "platform": "mobile"
         ]
         
         if needUserToken {
             //headers["Authorization"] = "Bearer \(/*TRUtilites.getCurrentUserToken()*/)"
+            let token = WFUtilites.getCurrentUserToken()
+            if !token.isEmpty {
+                headers["Authorization"] = "Bearer \(token)"
+            }
         }
         
         debugPrint("➡️ REQUEST URL:", absoluteUrl)
@@ -111,25 +105,27 @@ class APIClient: NSObject {
         .responseData { response in
             
             let statusCode = response.response?.statusCode
+            
             if let data = response.data {
                 debugPrint("⬅️ RAW RESPONSE:", String(data: data, encoding: .utf8) ?? "")
             }
             
-            guard let data = response.data else {
+            if let error = response.error {
+                debugPrint("❌ AF ERROR:", error.localizedDescription)
+            }
+            
+            guard let data = response.data, !data.isEmpty else {
                 completionHandler(nil, "No data received", statusCode)
                 return
             }
             
             do {
-                // Try decoding success response first
                 let decoded = try JSONDecoder().decode(T.self, from: data)
                 completionHandler(decoded, nil, statusCode)
             } catch {
-                // If decoding fails, try decoding API error
                 if let apiError = try? JSONDecoder().decode(APIErrorResponse.self, from: data) {
                     completionHandler(nil, apiError.message, statusCode)
                 } else {
-                    // Fallback: raw decoding error
                     completionHandler(nil, "Decoding error: \(error.localizedDescription)", statusCode)
                 }
             }
@@ -145,7 +141,7 @@ class APIClient: NSObject {
         completion: @escaping (Result<Data, Error>) -> Void
     ) {
         
-       let absoluteUrl = BASE_URL + v1 +  /*TRUtilites.getCurrentUserType().rawValue + */urlString.rawValue
+       let absoluteUrl = BASE_URL +  /*TRUtilites.getCurrentUserType().rawValue + */urlString.rawValue
         
         /*let deviceType = TRUtilites.deviceType()
         let deviceID = TRUtilites.deviceID()

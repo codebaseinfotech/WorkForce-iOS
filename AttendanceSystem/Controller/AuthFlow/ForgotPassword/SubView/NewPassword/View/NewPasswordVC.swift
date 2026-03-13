@@ -18,9 +18,15 @@ class NewPasswordVC: UIViewController {
     var isHiddanPassword: Bool = false
     var isHiddanConfirmPassword: Bool = false
     
+    var email: String = ""
+    var otp: String = ""
+    
+    var viewModel = NewPasswordVM()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupCallbacks()
         // Do any additional setup after loading the view.
     }
 
@@ -47,21 +53,59 @@ class NewPasswordVC: UIViewController {
     }
     
     @IBAction func tappedSubmit(_ sender: Any) {
-        guard let parentVC = self.presentingViewController else { return }
+        let password = txtPassword.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        let confirmPassword = txtConfirmPass.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         
-        self.dismiss(animated: true) {
-            let vc = PasswordSuccessVC()
-            vc.modalPresentationStyle = .overFullScreen
-            
-            vc.onSignIn = { [weak parentVC] in
-                guard let parentVC = parentVC else { return }
-                let loginVC = EmailLoginVC()
-                parentVC.navigationController?.setViewControllers([loginVC], animated: true)
-            }
-            
-            parentVC.present(vc, animated: false)
+        if password.isEmpty {
+            setUpMakeToast(msg: "Please enter new password")
+            return
         }
+        
+        if password.count < 6 {
+            setUpMakeToast(msg: "Password must be at least 6 characters")
+            return
+        }
+        
+        if confirmPassword.isEmpty {
+            setUpMakeToast(msg: "Please enter confirm password")
+            return
+        }
+        
+        if password != confirmPassword {
+            setUpMakeToast(msg: "Password and confirm password do not match")
+            return
+        }
+        
+        viewModel.setNewPassword(
+            email: email,
+            otp: otp,
+            password: password,
+            confirmPassword: confirmPassword
+        )
     }
     
+    func setupCallbacks() {
+        viewModel.successNewPassword = { [weak self] in
+            guard let self = self else { return }
+            guard let parentVC = self.presentingViewController else { return }
+            
+            self.dismiss(animated: true) {
+                let vc = PasswordSuccessVC()
+                vc.modalPresentationStyle = .overFullScreen
+                
+                vc.onSignIn = { [weak parentVC] in
+                    guard let parentVC = parentVC else { return }
+                    let loginVC = EmailLoginVC()
+                    parentVC.navigationController?.setViewControllers([loginVC], animated: true)
+                }
+                
+                parentVC.present(vc, animated: false)
+            }
+        }
+        
+        viewModel.failureNewPassword = { [weak self] msg in
+            self?.setUpMakeToast(msg: msg)
+        }
+    }
     
 }

@@ -24,12 +24,18 @@ class VerifyForgotPasswordVC: UIViewController {
         }
     }
     
+    var email: String = ""
+    var serverOtp: String = ""
     var enteredOtp: String = ""
+    
+    var viewModel = VerifyPasswordVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        lblEmailDis.text = "A reset code is on its way to \(email) Check your email to reset your password."
         setupOtpView()
+        setupCallbacks()
         // Do any additional setup after loading the view.
     }
     
@@ -46,6 +52,34 @@ class VerifyForgotPasswordVC: UIViewController {
         self.otpView.delegate = self
         self.otpView.initializeUI()
     }
+    
+    func setupCallbacks() {
+        viewModel.successVerifyPassword = { [weak self] in
+            guard let self = self else { return }
+            guard let parentVC = self.presentingViewController else { return }
+            
+            self.dismiss(animated: true) {
+                let vc = NewPasswordVC()
+                vc.email = self.email
+                vc.otp = self.enteredOtp
+                
+                if let sheet = vc.sheetPresentationController {
+                    let fixedDetent = UISheetPresentationController.Detent.custom(identifier: .init("fixed350")) { _ in
+                        return 350
+                    }
+                    sheet.detents = [fixedDetent]
+                    sheet.prefersGrabberVisible = true
+                }
+                
+                vc.sheetPresentationController?.delegate = parentVC as? UISheetPresentationControllerDelegate
+                parentVC.present(vc, animated: true)
+            }
+        }
+        
+        viewModel.failureVerifyPassword = { [weak self] msg in
+            self?.setUpMakeToast(msg: msg)
+        }
+    }
 
     @IBAction func tappedResendIt(_ sender: Any) {
         
@@ -57,22 +91,7 @@ class VerifyForgotPasswordVC: UIViewController {
             return
         }
         
-        guard let parentVC = self.presentingViewController else { return }
-        
-        self.dismiss(animated: true) {
-            let vc = NewPasswordVC()
-            
-            if let sheet = vc.sheetPresentationController {
-                let fixedDetent = UISheetPresentationController.Detent.custom(identifier: .init("fixed350")) { _ in
-                    return 350
-                }
-                sheet.detents = [fixedDetent]
-                sheet.prefersGrabberVisible = true
-            }
-            
-            vc.sheetPresentationController?.delegate = parentVC as? UISheetPresentationControllerDelegate
-            parentVC.present(vc, animated: true)
-        }
+        viewModel.verifyPassword(email: email, otp: enteredOtp)
     }
     
 }
@@ -90,7 +109,7 @@ extension VerifyForgotPasswordVC: OTPFieldViewDelegate {
     
     func enteredOTP(otp otpString: String) {
         print("OTPString: \(otpString)")
-        self.enteredOtp = otpString
+        enteredOtp = otpString
     }
 }
 

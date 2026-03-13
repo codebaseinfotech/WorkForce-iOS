@@ -26,6 +26,8 @@ class ForgotPasswordVC: UIViewController {
     @IBOutlet weak var txtEmailAddress: UITextField!
     @IBOutlet weak var btnSendVerification: UIButton!
     
+    var viewModel = ForgotPasswordVM()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +38,7 @@ class ForgotPasswordVC: UIViewController {
         )
         
         updateSendButton(isValid: false)
+        setupForgotPasswordCallbacks()
         // Do any additional setup after loading the view.
     }
 
@@ -48,22 +51,12 @@ class ForgotPasswordVC: UIViewController {
             return
         }
         
-        guard let parentVC = self.presentingViewController else { return }
-        
-        self.dismiss(animated: true) {
-            let vc = VerifyForgotPasswordVC()
-            
-            if let sheet = vc.sheetPresentationController {
-                let fixedDetent = UISheetPresentationController.Detent.custom(identifier: .init("fixed260")) { _ in
-                    return 260
-                }
-                sheet.detents = [fixedDetent]
-                sheet.prefersGrabberVisible = true
-            }
-            
-            vc.sheetPresentationController?.delegate = parentVC as? UISheetPresentationControllerDelegate
-            parentVC.present(vc, animated: true)
+        if !isValidEmail(email) {
+            setUpMakeToast(msg: "Please enter valid email address")
+            return
         }
+        
+        viewModel.changePassword(email: email)
     }
     
     @objc func emailTextDidChange() {
@@ -89,6 +82,39 @@ class ForgotPasswordVC: UIViewController {
         let emailRegEx = "^[A-Z0-9a-z._%+\\-]+@[A-Za-z0-9.\\-]+\\.[A-Za-z]{2,64}$"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: email)
+    }
+    
+    func setupForgotPasswordCallbacks() {
+        viewModel.successForgotPass = { [weak self] in
+            guard let self = self else { return }
+            guard let parentVC = self.presentingViewController else { return }
+            
+            let email = self.txtEmailAddress.text?
+                .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+            
+            self.dismiss(animated: true) {
+                let vc = VerifyForgotPasswordVC()
+                
+                // if needed in next screen
+                vc.email = email
+                vc.serverOtp = "\(self.viewModel.forgotPasswordResponse?.otp ?? 0)"
+                
+                if let sheet = vc.sheetPresentationController {
+                    let fixedDetent = UISheetPresentationController.Detent.custom(identifier: .init("fixed260")) { _ in
+                        return 260
+                    }
+                    sheet.detents = [fixedDetent]
+                    sheet.prefersGrabberVisible = true
+                }
+                
+                vc.sheetPresentationController?.delegate = parentVC as? UISheetPresentationControllerDelegate
+                parentVC.present(vc, animated: true)
+            }
+        }
+        
+        viewModel.failureForgotPass = { [weak self] msg in
+            self?.setUpMakeToast(msg: msg)
+        }
     }
     
 }

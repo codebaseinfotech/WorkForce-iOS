@@ -31,6 +31,8 @@ class EmailLoginVC: UIViewController {
     var isHiddanPassword: Bool = false
     var isRemember: Bool = false
     
+    var viewModel = LoginVM()
+    
     // MARK: - View Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,8 +67,23 @@ class EmailLoginVC: UIViewController {
         self.present(vc, animated: true)
     }
     @IBAction func tappedSignIn(_ sender: Any) {
-        let vc = HomeVC()
-        navigationController?.pushViewController(vc, animated: true)
+        guard let employeeId = txxEmail.text, !employeeId.isEmpty else {
+            self.setUpMakeToast(msg: "Please enter employee Id")
+            return
+        }
+        
+        guard let password = txtPassword.text, !password.isEmpty else {
+            self.setUpMakeToast(msg: "Please enter password")
+            return
+        }
+        
+        viewModel.login(login: employeeId, password: password)
+        viewModel.successLogin = { [weak self] in
+            AppDelegate.appDelegate.setUpHome()
+        }
+        viewModel.failureLogin = { [weak self] msg in
+            self?.setUpMakeToast(msg: msg)
+        }
     }
     @IBAction func tappedSignInEmployeeId(_ sender: Any) {
         let vc = EmployeeLoginVC()
