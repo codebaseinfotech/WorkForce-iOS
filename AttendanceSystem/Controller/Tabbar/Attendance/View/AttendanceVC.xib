@@ -17,8 +17,11 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AttendanceVC" customModule="AttendanceSystem" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AttendanceVC" customModule="Work_Force" customModuleProvider="target">
             <connections>
+                <outlet property="imgUser" destination="2wI-B8-YFE" id="WI6-6b-1Du"/>
+                <outlet property="lblGreeting" destination="Tk3-v8-TPo" id="Wvj-PD-7Iq"/>
+                <outlet property="lblUserName" destination="HZ2-Iv-Hoj" id="vaS-Uv-o0K"/>
                 <outlet property="scrollView" destination="QQu-1f-wEb" id="5Fw-93-aCs"/>
                 <outlet property="tblVIewHeightConst" destination="nIN-uV-Z4d" id="uhp-wC-hKb"/>
                 <outlet property="tblViewAttendanceList" destination="zf9-27-xar" id="dcu-s4-Dvx"/>
@@ -341,8 +344,8 @@
                                                 <constraint firstAttribute="width" constant="45" id="rC5-zX-ddD"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attendance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pd5-kc-3j2">
-                                            <rect key="frame" x="0.0" y="43.333333333333371" width="70.666666666666671" height="16.666666666666671"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attendance" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pd5-kc-3j2">
+                                            <rect key="frame" x="0.0" y="37" width="70.666666666666671" height="33"/>
                                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                                             <color key="textColor" name="primery"/>
                                             <nil key="highlightedColor"/>
@@ -355,10 +358,10 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="Pd5-kc-3j2" firstAttribute="leading" secondItem="QGl-sr-7bg" secondAttribute="leading" id="0r9-P9-su7"/>
-                                        <constraint firstAttribute="bottom" secondItem="Pd5-kc-3j2" secondAttribute="bottom" constant="20" id="43O-qO-rnE"/>
                                         <constraint firstAttribute="trailing" secondItem="tfh-4r-Fae" secondAttribute="trailing" id="CHn-l2-e5P"/>
                                         <constraint firstAttribute="trailing" secondItem="Pd5-kc-3j2" secondAttribute="trailing" id="Lwy-EB-q7A"/>
                                         <constraint firstItem="Pd5-kc-3j2" firstAttribute="centerX" secondItem="QGl-sr-7bg" secondAttribute="centerX" id="NUd-ma-zHL"/>
+                                        <constraint firstItem="Pd5-kc-3j2" firstAttribute="top" secondItem="ZnD-EA-R5m" secondAttribute="bottom" constant="11" id="iZG-Vc-4T6"/>
                                         <constraint firstItem="tfh-4r-Fae" firstAttribute="leading" secondItem="QGl-sr-7bg" secondAttribute="leading" id="lvY-Lh-Hxs"/>
                                         <constraint firstAttribute="bottom" secondItem="tfh-4r-Fae" secondAttribute="bottom" id="sWI-pc-TPR"/>
                                         <constraint firstItem="tfh-4r-Fae" firstAttribute="top" secondItem="QGl-sr-7bg" secondAttribute="top" id="t2c-ku-7fa"/>

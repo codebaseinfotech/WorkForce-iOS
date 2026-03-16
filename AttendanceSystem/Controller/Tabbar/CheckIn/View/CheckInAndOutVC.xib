@@ -22,6 +22,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckInAndOutVC" customModule="Work_Force" customModuleProvider="target">
             <connections>
+                <outlet property="btnBreakIn" destination="Tf1-Om-irh" id="Lu7-jp-WM5"/>
+                <outlet property="btnBreakOut" destination="CIh-Pn-gWo" id="YbP-Bb-JFu"/>
+                <outlet property="btnCheckIn" destination="376-vT-eGN" id="2ho-OE-Pzy"/>
+                <outlet property="btnCheckOut" destination="KS6-HG-nxi" id="uPe-2D-Vvg"/>
                 <outlet property="heightConstTblView" destination="5DL-5a-107" id="5cD-Lq-lpa"/>
                 <outlet property="lblBreakHours" destination="guA-Ad-Q2o" id="Prp-6d-ZFy"/>
                 <outlet property="lblBreakIn" destination="ouY-Vf-Zvs" id="tyA-68-scM"/>
@@ -382,6 +386,9 @@
                                                                     <real key="value" value="21"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="tappedCheckIn:" destination="-1" eventType="touchUpInside" id="V8k-z1-JOs"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tf1-Om-irh">
                                                             <rect key="frame" x="0.0" y="222" width="321" height="42"/>
@@ -404,6 +411,9 @@
                                                                     <color key="value" name="primery"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="tappedBreakIn:" destination="-1" eventType="touchUpInside" id="mkE-Do-YlS"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIh-Pn-gWo">
                                                             <rect key="frame" x="0.0" y="280" width="321" height="42"/>
@@ -426,6 +436,9 @@
                                                                     <color key="value" name="primery"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="tappedBreakOut:" destination="-1" eventType="touchUpInside" id="x4I-ZY-qGT"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KS6-HG-nxi">
                                                             <rect key="frame" x="0.0" y="338" width="321" height="42"/>
@@ -443,6 +456,9 @@
                                                                     <real key="value" value="21"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="tappedCheckOut:" destination="-1" eventType="touchUpInside" id="1v6-7I-FBh"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>

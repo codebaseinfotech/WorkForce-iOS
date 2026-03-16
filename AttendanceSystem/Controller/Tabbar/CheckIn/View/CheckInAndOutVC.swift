@@ -39,10 +39,18 @@ class CheckInAndOutVC: UIViewController {
     @IBOutlet weak var lblGreeting: UILabel!
     @IBOutlet weak var lblUserName: UILabel!
     
+    @IBOutlet weak var btnCheckIn: UIButton!
+    @IBOutlet weak var btnBreakIn: UIButton!
+    @IBOutlet weak var btnBreakOut: UIButton!
+    @IBOutlet weak var btnCheckOut: UIButton!
+    
     var arrDay = ["Tuesday", "Wednesday", "Thursday"]
     var arrTime = ["09:00 AM - 06:00 PM", "09:00 AM - 06:00 PM", "09:00 AM - 06:00 PM"]
     
     var timer: Timer?
+    
+    var viewModel = HomeVM()
+    var selectedAction: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,8 +58,68 @@ class CheckInAndOutVC: UIViewController {
         lblGreeting.text = "\(getGreeting())"
         lblUserName.text = "\(WFUtilites.getCurrentUser()?.user?.firstName ?? "") \(WFUtilites.getCurrentUser()?.user?.lastName ?? "")"
         
+        bindViewModel()
         startTimer()
+        callHomeAPI()
         // Do any additional setup after loading the view.
+    }
+    
+    // MARK: - Bind ViewModel
+    func bindViewModel() {
+        viewModel.successHomeData = { [weak self] in
+            guard let self = self else { return }
+            self.setHomeData()
+            self.showSuccessPopup()
+        }
+        
+        viewModel.failureHomeData = { errorMessage in
+            self.setUpMakeToast(msg: errorMessage)
+        }
+    }
+    
+    func callHomeAPI(isAction: Bool = false, action: String = "") {
+        selectedAction = action
+        viewModel.currentDate = Date.currentDateString()
+        viewModel.currentTime = Date.currentTimeString()
+        viewModel.action = action
+        viewModel.getHomeData(isAction: isAction)
+    }
+    
+    func setHomeData() {
+        guard let data = viewModel.attendanceResponse else { return }
+        
+        lblShiftTiming.text = "\(data.workSchedule?.startTime ?? "--") - \(data.workSchedule?.endTime ?? "--")"
+        lblWorkingHours.text = data.workSchedule?.workingHours ?? "--"
+        lblBreakHours.text = "\(data.workSchedule?.breakMinutes ?? 0) Min"
+        
+        lblCheckIn.text = data.todaySummary?.checkIn ?? "--"
+        lblBreakIn.text = data.todaySummary?.breakIn ?? "--"
+        lblBreakOut.text = data.todaySummary?.breakOut ?? "--"
+        lblCheckOut.text = data.todaySummary?.checkOut ?? "--"
+        lblTotalHoursWorked.text = data.todaySummary?.totalHoursWorked ?? "--"
+        lblTotalHoursBreaked.text = data.todaySummary?.totalHoursBreaked ?? "--"
+    }
+    
+    func showSuccessPopup() {
+        guard !selectedAction.isEmpty else { return }
+        
+        let vc = SuccessPopUp()
+        vc.modalPresentationStyle = .overFullScreen
+        
+        switch selectedAction {
+        case "check_in":
+            vc.type = .checkIn
+        case "break_in":
+            vc.type = .breakIn
+        case "break_out":
+            vc.type = .breakOut
+        case "check_out":
+            vc.type = .checkOut
+        default:
+            return
+        }
+        
+        self.present(vc, animated: false)
     }
     
     // MARK: - TV height set
@@ -116,6 +184,21 @@ class CheckInAndOutVC: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func tappedCheckIn(_ sender: Any) {
+        callHomeAPI(isAction: true, action: "check_in")
+    }
+    
+    @IBAction func tappedBreakIn(_ sender: Any) {
+        callHomeAPI(isAction: true, action: "break_in")
+    }
+    
+    @IBAction func tappedBreakOut(_ sender: Any) {
+        callHomeAPI(isAction: true, action: "break_out")
+    }
+    
+    @IBAction func tappedCheckOut(_ sender: Any) {
+        callHomeAPI(isAction: true, action: "check_out")
+    }
     
     func getGreeting() -> String {
         let hour = Calendar.current.component(.hour, from: Date())

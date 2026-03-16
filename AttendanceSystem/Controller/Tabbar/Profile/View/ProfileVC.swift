@@ -24,6 +24,9 @@ class ProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        lblUserName.text = "\(WFUtilites.getCurrentUser()?.user?.firstName ?? "") \(WFUtilites.getCurrentUser()?.user?.lastName ?? "")"
+        lblEmail.text = WFUtilites.getCurrentUser()?.user?.email ?? ""
+        lblPhoneNum.text = WFUtilites.getCurrentUser()?.user?.phone ?? ""
         // Do any additional setup after loading the view.
     }
 

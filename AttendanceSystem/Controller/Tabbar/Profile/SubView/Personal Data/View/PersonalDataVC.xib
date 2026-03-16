@@ -23,8 +23,17 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonalDataVC" customModule="AttendanceSystem" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonalDataVC" customModule="Work_Force" customModuleProvider="target">
             <connections>
+                <outlet property="imgUser" destination="KkE-tP-uC5" id="MUd-m4-2JX"/>
+                <outlet property="lblUserName" destination="X26-Jj-Alh" id="TGI-Cz-B5b"/>
+                <outlet property="lblUserProfession" destination="cAd-kq-o1B" id="rLj-zD-WGb"/>
+                <outlet property="txtAddress" destination="Dkr-Ks-Uhw" id="uzQ-Fr-NQj"/>
+                <outlet property="txtDOB" destination="8C8-FG-hKi" id="nDS-mr-TdM"/>
+                <outlet property="txtFirstName" destination="hwm-XK-kWu" id="ASI-fy-Gpx"/>
+                <outlet property="txtLastName" destination="8fp-tt-AVf" id="3E4-VX-G5o"/>
+                <outlet property="txtPhoneNum" destination="iFZ-2L-pWC" id="aN0-9R-OmN"/>
+                <outlet property="txtPosition" destination="gwg-DR-kRY" id="goj-Qe-CO1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -283,8 +292,9 @@
                                                                 <constraint firstAttribute="height" constant="20" id="sDx-iS-4ww"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10 December 1997" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8C8-FG-hKi">
+                                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8C8-FG-hKi">
                                                             <rect key="frame" x="42" y="5" width="301" height="33.666666666666664"/>
+                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>

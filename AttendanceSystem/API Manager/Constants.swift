@@ -27,4 +27,6 @@ enum APIEndPoint: String {
     case verifyOtp = "verify-otp"
     case resetPassword = "reset-password"
     case attendancesMark = "v1/attendances/mark"
+    case userAdd = "user-add"
+    case attendanceList = "v1/attendances/all"
 }

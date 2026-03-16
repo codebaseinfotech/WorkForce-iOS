@@ -24,10 +24,12 @@ class HomeVM {
         
         var parameters: [String: Any] = [
             "company_id": WFUtilites.getCurrentUser()?.user?.companyId ?? 0,
-            "date": "2026-03-14",
+            "date": currentDate,
             "time": currentTime,
-            "latitude": "25.131144",
-            "longitude": "55.387855"
+//            "latitude": AppDelegate.appDelegate.latitude ?? 0.0,
+            "latitude": "25.131089",
+//            "longitude": AppDelegate.appDelegate.longitude ?? 0.0
+            "longitude": "55.387838"
         ]
         
         if isAction {

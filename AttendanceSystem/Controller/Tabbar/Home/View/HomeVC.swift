@@ -68,7 +68,7 @@ class HomeVC: UIViewController {
         }
         
         viewModel.failureHomeData = { errorMessage in
-            print("Home API Error:", errorMessage)
+            self.setUpMakeToast(msg: errorMessage)
         }
     }
     

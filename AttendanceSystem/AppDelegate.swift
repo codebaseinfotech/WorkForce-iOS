@@ -8,6 +8,7 @@
 import UIKit
 import GoogleMaps
 import CoreLocation
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
@@ -26,6 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Keyboard
+        IQKeyboardManager.shared.enable = true
         
         GMSServices.provideAPIKey("AIzaSyD4Fl5fv1u4g-96GrYYGCJmqCtTx6fs_CI")
         
@@ -72,8 +76,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         latitude = location.coordinate.latitude
         longitude = location.coordinate.longitude
         
-        print("Current Latitude:", latitude ?? 0)
-        print("Current Longitude:", longitude ?? 0)
+//        print("Current Latitude:", latitude ?? 0)
+//        print("Current Longitude:", longitude ?? 0)
     }
 
 }

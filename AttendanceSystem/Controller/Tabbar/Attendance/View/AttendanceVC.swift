@@ -24,12 +24,33 @@ class AttendanceVC: UIViewController {
         }
     }
     @IBOutlet weak var tblVIewHeightConst: NSLayoutConstraint!
+    @IBOutlet weak var lblGreeting: UILabel!
+    @IBOutlet weak var lblUserName: UILabel!
+    @IBOutlet weak var imgUser: UIImageView!
+    
+    var viewModel = AttendanceVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tblVIewHeightConst.constant = tblViewAttendanceList.rowHeight
+        
+        lblGreeting.text = "\(getGreeting())"
+        lblUserName.text = "\(WFUtilites.getCurrentUser()?.user?.firstName ?? "") \(WFUtilites.getCurrentUser()?.user?.lastName ?? "")"
+        
+        setupCallbacks()
         // Do any additional setup after loading the view.
+    }
+    
+    func setupCallbacks() {
+        viewModel.getAttendanceList()
+        viewModel.successAttendanceData = { [self] in
+                        
+            tblViewAttendanceList.reloadData()
+        }
+        viewModel.failureAttendanceData = { msg in
+            self.setUpMakeToast(msg: msg)
+        }
     }
 
     // MARK: - Tabbar Action
@@ -73,16 +94,50 @@ class AttendanceVC: UIViewController {
             }
         }
     }
+    
+    func getGreeting() -> String {
+        let hour = Calendar.current.component(.hour, from: Date())
+        
+        switch hour {
+        case 0..<12:
+            return "Good Morning"
+        case 12..<17:
+            return "Good Afternoon"
+        case 17..<21:
+            return "Good Evening"
+        default:
+            return "Good Night"
+        }
+    }
 
+    func formatDate(_ dateString: String) -> String {
+        
+        let inputFormatter = DateFormatter()
+        inputFormatter.dateFormat = "yyyy-MM-dd"
+        
+        let outputFormatter = DateFormatter()
+        outputFormatter.dateFormat = "dd MMM yyyy"
+        
+        if let date = inputFormatter.date(from: dateString) {
+            return outputFormatter.string(from: date)
+        }
+        
+        return dateString
+    }
 }
 
 extension AttendanceVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel.attendanceResponse?.attendances?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tblViewAttendanceList.dequeueReusableCell(withIdentifier: "AttendanceListTVCell", for: indexPath) as! AttendanceListTVCell
+        
+        let item = viewModel.attendanceResponse?.attendances?[indexPath.row]
+        cell.lblDate.text = formatDate(item?.date ?? "")
+        cell.lblCheckInTime.text = item?.checkIn ?? ""
+        cell.lblCheckOutTime.text = item?.checkOut ?? ""
         
         cell.onViewTapped = {
             let vc = AttendanceDetailsVC()
