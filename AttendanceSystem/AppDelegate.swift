@@ -7,9 +7,10 @@
 
 import UIKit
 import GoogleMaps
+import CoreLocation
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
     var window: UIWindow?
     
@@ -19,15 +20,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    var latitude: Double?
+    var longitude: Double?
+    let locationManager = CLLocationManager()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         GMSServices.provideAPIKey("AIzaSyD4Fl5fv1u4g-96GrYYGCJmqCtTx6fs_CI")
         
-//        setUpLogin()
         WFUtilites.getIsCurrntUserLogin() ? self.setUpHome() : self.setUpLogin()
         
+        setupLocation()
+        
         return true
+    }
+    
+    func setupLocation() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
 
     // MARK: - Root Controllers
@@ -50,6 +63,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         nav.navigationBar.isHidden = true
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        guard let location = locations.last else { return }
+        
+        latitude = location.coordinate.latitude
+        longitude = location.coordinate.longitude
+        
+        print("Current Latitude:", latitude ?? 0)
+        print("Current Longitude:", longitude ?? 0)
     }
 
 }

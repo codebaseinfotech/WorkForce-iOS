@@ -34,11 +34,11 @@ class SuccessPopUp: UIViewController {
             lblDis.text = "Your attendance has been recorded for the end of today’s shift."
             
         case .breakIn:
-            lblTitle.text = "Break Started Successfully"
+            lblTitle.text = "Break-In Successfully"
             lblDis.text = "Your break has been recorded as per your schedule."
             
         case .breakOut:
-            lblTitle.text = "Break Ended Successfully"
+            lblTitle.text = "Break-Out Successfully"
             lblDis.text = "Your break period has been recorded as completed."
             
         default:

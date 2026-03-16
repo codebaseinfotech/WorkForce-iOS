@@ -36,13 +36,21 @@ class CheckInAndOutVC: UIViewController {
         }
     }
     @IBOutlet weak var heightConstTblView: NSLayoutConstraint!
+    @IBOutlet weak var lblGreeting: UILabel!
+    @IBOutlet weak var lblUserName: UILabel!
     
     var arrDay = ["Tuesday", "Wednesday", "Thursday"]
     var arrTime = ["09:00 AM - 06:00 PM", "09:00 AM - 06:00 PM", "09:00 AM - 06:00 PM"]
     
+    var timer: Timer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        lblGreeting.text = "\(getGreeting())"
+        lblUserName.text = "\(WFUtilites.getCurrentUser()?.user?.firstName ?? "") \(WFUtilites.getCurrentUser()?.user?.lastName ?? "")"
+        
+        startTimer()
         // Do any additional setup after loading the view.
     }
     
@@ -54,6 +62,26 @@ class CheckInAndOutVC: UIViewController {
                 self.heightConstTblView.constant = newsize.height
             }
         }
+    }
+    
+    func startTimer() {
+        updateDateTime()
+        timer = Timer.scheduledTimer(timeInterval: 1,
+                                     target: self,
+                                     selector: #selector(updateDateTime),
+                                     userInfo: nil,
+                                     repeats: true)
+    }
+    
+    @objc func updateDateTime() {
+        
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "hh:mm:ss a"
+        lblCurrentTime.text = timeFormatter.string(from: Date())
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, MMMM d, yyyy"
+        lblCurrentDate.text = dateFormatter.string(from: Date())
     }
 
     // MARK: - Tabbar Action
@@ -89,7 +117,20 @@ class CheckInAndOutVC: UIViewController {
     }
     
     
-    
+    func getGreeting() -> String {
+        let hour = Calendar.current.component(.hour, from: Date())
+        
+        switch hour {
+        case 0..<12:
+            return "Good Morning"
+        case 12..<17:
+            return "Good Afternoon"
+        case 17..<21:
+            return "Good Evening"
+        default:
+            return "Good Night"
+        }
+    }
     
 }
 
