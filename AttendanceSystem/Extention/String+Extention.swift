@@ -19,8 +19,8 @@ extension String {
     }
     
     /// Convert API date string to display string
-    func toDisplayDate(apiFormat: String = "yyyy-MM-dd HH:mm:ss",
-                       displayFormat: String = "dd MMM, yyyy hh:mm a",
+    func toDisplayDate(apiFormat: String = "yyyy-MM-dd",
+                       displayFormat: String = "dd MMM yyyy",
                        apiTimeZone: TimeZone = TimeZone(abbreviation: "UTC")!,
                        displayTimeZone: TimeZone = TimeZone.current) -> String {
         

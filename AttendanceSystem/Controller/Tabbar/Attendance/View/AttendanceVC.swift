@@ -110,20 +110,6 @@ class AttendanceVC: UIViewController {
         }
     }
 
-    func formatDate(_ dateString: String) -> String {
-        
-        let inputFormatter = DateFormatter()
-        inputFormatter.dateFormat = "yyyy-MM-dd"
-        
-        let outputFormatter = DateFormatter()
-        outputFormatter.dateFormat = "dd MMM yyyy"
-        
-        if let date = inputFormatter.date(from: dateString) {
-            return outputFormatter.string(from: date)
-        }
-        
-        return dateString
-    }
 }
 
 extension AttendanceVC: UITableViewDelegate, UITableViewDataSource {
@@ -135,7 +121,7 @@ extension AttendanceVC: UITableViewDelegate, UITableViewDataSource {
         let cell = self.tblViewAttendanceList.dequeueReusableCell(withIdentifier: "AttendanceListTVCell", for: indexPath) as! AttendanceListTVCell
         
         let item = viewModel.attendanceResponse?.attendances?[indexPath.row]
-        cell.lblDate.text = formatDate(item?.date ?? "")
+        cell.lblDate.text = item?.date?.toDisplayDate()
         cell.lblCheckInTime.text = item?.checkIn ?? ""
         cell.lblCheckOutTime.text = item?.checkOut ?? ""
         
